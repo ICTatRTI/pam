@@ -1,9 +1,5 @@
-
-
-**Pam**
-=====================
-
-This is an IOS app using the ResearchKit framework for the Ecological Momentary Assessment using Pam![pam.png](https://bitbucket.org/repo/qqykrk/images/3848495711-pam.png)
+![pam_w.png](https://bitbucket.org/repo/qqykrk/images/1816352512-pam_w.png)
+This is an IOS app using the ResearchKit framework for the Ecological Momentary Assessment using Pam
 
 Bugs, new requests or contribution
 --------------
