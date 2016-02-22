@@ -3,6 +3,6 @@ This is an IOS app using the ResearchKit framework for the Ecological Momentary 
 
 Bugs, new requests or contribution
 --------------
-Please submit bugs, gripes and feature requests at https://bitbucket.org/rcdrti/ema/issues
+Please submit bugs, gripes and feature requests at https://bitbucket.org/rcdrti/pam/issues
 
 Any other questions contact Adam Preston on Twitter at @adam704a or email  apreston@rti.org
