@@ -49,7 +49,90 @@ class ViewController: UIViewController,  ORKTaskViewControllerDelegate {
         didFinishWithReason reason: ORKTaskViewControllerFinishReason,
         error: NSError?) {
             
-            debugPrint("pretty much done")
+            
+            
+            let parameters = [
+                "username": "researcher",
+                "password": "1234thumbwar"
+            ]
+            
+            
+            // Won't need to do this, figure out some way of caching the token
+            Alamofire.request(.POST, "https://researchnet.ictedge.org/api-token-auth/", parameters: parameters).responseJSON { response in
+                
+                debugPrint(response)     // prints detailed description of all response properties
+                
+                print(response.request)  // original URL request
+                print(response.response) // URL response
+                print(response.data)     // server data
+                print(response.result)   // result of response serialization
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+            }
+            
+            
+            var responsejson: JSON =  [:]
+            responsejson["device_id"].stringValue = UIDevice.currentDevice().identifierForVendor!.UUIDString
+            
+            let taskResult = taskViewController.result // this should be a ORKTaskResult
+            let results = taskResult.results as! [ORKStepResult]//[ORKStepResult]
+            
+            var responses: [String:String] = [:]
+            
+            
+            for thisStepResult in results { // [ORKStepResults]
+                
+                let stepResults = thisStepResult.results as! [ORKQuestionResult]
+                
+                /*
+                    Go through the supported answer formats.  This is made easier with AppCore but we're not using this for now just because a) its in objective C and kind of hard to use and 2) its going away at some point to be replaced with enhancements to the ResearchKit framework
+                
+                */
+                if let scaleresult = stepResults.first as? ORKScaleQuestionResult
+                {
+                    if scaleresult.scaleAnswer != nil
+                    {
+                        responses[scaleresult.identifier] = (scaleresult.scaleAnswer?.stringValue)!
+                    }
+                }
+                
+                if let choiceresult = stepResults.first as? ORKChoiceQuestionResult
+                {
+                    if choiceresult.choiceAnswers != nil
+                    {
+                        let selected = choiceresult.choiceAnswers!
+                        responses[choiceresult.identifier] = "\(selected.first!)"
+                    }
+                }
+                
+                responsejson["response"].dictionaryObject = responses
+                
+            }
+            
+            
+            let headers = [
+                "Authorization": "Token b8fba8a491c4b783b7e0bb9342e6e8b27f2b0cd1"
+            ]
+            
+            debugPrint(responsejson)
+            
+            
+            Alamofire.request(.POST, "https://researchnet.ictedge.org/submission/", headers: headers, parameters: responsejson.dictionaryObject ,encoding: .JSON).responseJSON { response in
+                
+                debugPrint(response)     // prints detailed description of all response properties
+                
+                print(response.request)  // original URL request
+                print(response.response) // URL response
+                print(response.data)     // server data
+                print(response.result)   // result of response serialization
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+                
+            }
             
             /*
             The `reason` passed to this method indicates why the task view
@@ -96,8 +179,8 @@ class ViewController: UIViewController,  ORKTaskViewControllerDelegate {
     private var instructionStep : ORKInstructionStep {
         
         let instructionStep = ORKInstructionStep(identifier: "intro")
-        instructionStep.title = "Welcome to RTI ResearchKit"
-        instructionStep.text = "This survey can help us understand your eligibility for the mental fitness study"
+        instructionStep.title = "Welcome to RTI's Photographic Affect Meter"
+        instructionStep.text = "This is a novel tool for frequent, unobtrusive measurement of affect."
         
         return instructionStep
         
