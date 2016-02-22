@@ -30,7 +30,7 @@ class ViewController: UIViewController,  ORKTaskViewControllerDelegate {
     override func viewDidAppear(animated: Bool) {
         
         
-        let task = ORKOrderedTask(identifier: "task", steps: [instructionStep, moodOptionListStep, moodOptionScaleStep, pamOptionStep, summaryStep])
+        let task = ORKOrderedTask(identifier: "task", steps: [instructionStep, pamOptionStep, summaryStep])
         
         
         /*
@@ -102,33 +102,7 @@ class ViewController: UIViewController,  ORKTaskViewControllerDelegate {
         return instructionStep
         
     }
-    /**
-     This step demonstrates a survey question for picking from a list of text
-     choices. In this case, the text choices are presented in a table view.  This is better than
-     the valuePickerQuestionTask question task type when the respondent should see
-     all of the options
-     */
-    
-    private var moodOptionListStep : ORKQuestionStep {
-        
-        let textChoiceOneText = NSLocalizedString("Bad", comment: "Not good at all")
-        let textChoiceTwoText = NSLocalizedString("Fine", comment: "Whatever")
-        let textChoiceThreeText = NSLocalizedString("Fantastic", comment: "Really good, actually")
-        
-        // The text to display can be separate from the value coded for each choice:
-        let textChoices = [
-            ORKTextChoice(text: textChoiceOneText, value: "bad"),
-            ORKTextChoice(text: textChoiceTwoText, value: "fine"),
-            ORKTextChoice(text: textChoiceThreeText, value: "good")
-        ]
-        
-        let answerFormat = ORKAnswerFormat.choiceAnswerFormatWithStyle(.SingleChoice, textChoices: textChoices)
-        
-        let questionStep = ORKQuestionStep(identifier: "mood category", title: "How is your day going today?", answer: answerFormat)
-        
-        return questionStep
-        
-    }
+   
     
     /**
      This step demonstrates a survey question for assessing a Photographic Affect Meter (PAM)
@@ -159,23 +133,7 @@ class ViewController: UIViewController,  ORKTaskViewControllerDelegate {
         return pamQuestionStep
     }
     
-    /**
-     This step demonstrates a survey question using a likert scale
-     */
-    
-    private var moodOptionScaleStep : ORKQuestionStep {
-        
-        
-        // The third step is a vertical scale control with 10 discrete ticks.
-        let step1AnswerFormat = ORKAnswerFormat.scaleAnswerFormatWithMaximumValue(10, minimumValue: 1, defaultValue: NSIntegerMax, step: 1, vertical: false, maximumValueDescription: nil, minimumValueDescription: nil)
-        
-        
-        let questionStep = ORKQuestionStep(identifier: "mood scale", title: "What is your current stress level?", answer: step1AnswerFormat)
-        
-        questionStep.text = "Select a point on this scale where 10 is the most stress and 1 is no stress"
-        
-        return questionStep
-    }
+   
 
 
 }
