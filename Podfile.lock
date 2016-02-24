@@ -1,11 +1,9 @@
 PODS:
   - Alamofire (3.1.5)
-  - ResearchKit (1.3.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.1.5)
-  - ResearchKit (~> 1.3.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
@@ -19,7 +17,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
-  ResearchKit: 934a1efefed1a3a9150002a1e4b123d0c86c3f2e
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

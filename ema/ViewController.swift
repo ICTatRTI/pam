@@ -193,7 +193,7 @@ class ViewController: UIViewController,  ORKTaskViewControllerDelegate {
     
     private var pamOptionStep : ORKQuestionStep {
         
-        let pamQuestionStepTitle = "What is your current mood ?"
+        let pamQuestionStepTitle = "Touch the photo that best captures how you feel right now."
         
         //TODO come up with some intelligent way of randomizing these
         let pamTuples = [
@@ -202,7 +202,10 @@ class ViewController: UIViewController,  ORKTaskViewControllerDelegate {
             (UIImage(named: "1_3")!, "3"),
             (UIImage(named: "2_1")!, "4"),
             (UIImage(named: "2_2")!, "5"),
-            (UIImage(named: "2_3")!, "6")
+            (UIImage(named: "2_3")!, "6"),
+            (UIImage(named: "2_3")!, "7"),
+            (UIImage(named: "2_3")!, "8"),
+            (UIImage(named: "2_3")!, "9"),
         ]
         
         let imageChoices : [ORKImageChoice] = pamTuples.map {
@@ -210,6 +213,8 @@ class ViewController: UIViewController,  ORKTaskViewControllerDelegate {
         }
         
         let pamAnswerFormat: ORKImageChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormatWithImageChoices(imageChoices)
+        
+        pamAnswerFormat.questionType
         
         let pamQuestionStep = ORKQuestionStep(identifier: "mood image", title: pamQuestionStepTitle, answer: pamAnswerFormat)
         
