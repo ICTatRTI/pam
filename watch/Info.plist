@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>org.rti.ema</string>
+	<string>org.rti.pam</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
