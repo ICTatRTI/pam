@@ -202,10 +202,7 @@ class ViewController: UIViewController,  ORKTaskViewControllerDelegate {
             (UIImage(named: "1_3")!, "3"),
             (UIImage(named: "2_1")!, "4"),
             (UIImage(named: "2_2")!, "5"),
-            (UIImage(named: "2_3")!, "6"),
-            (UIImage(named: "2_3")!, "7"),
-            (UIImage(named: "2_3")!, "8"),
-            (UIImage(named: "2_3")!, "9"),
+            (UIImage(named: "2_3")!, "6")
         ]
         
         let imageChoices : [ORKImageChoice] = pamTuples.map {
