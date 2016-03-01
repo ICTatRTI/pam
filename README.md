@@ -3,4 +3,4 @@ This is an IOS app using the ResearchKit framework for the Ecological Momentary 
 
 Bugs, new requests or contribution
 --------------
-Please submit bugs, gripes and feature requests at https://bitbucket.org/rcdrti/pam/issues. Any other questions contact Adam Preston on Twitter at @adam704a or email  apreston@rti.org
+Please submit bugs, gripes and feature requests at https://bitbucket.org/rcdrti/pam/issues. For any other questions send a polite and grammatically correct email to Adam Preston to this email address: apreston@rti.org

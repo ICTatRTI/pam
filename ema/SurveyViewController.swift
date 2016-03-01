@@ -13,7 +13,7 @@ import Alamofire
 import SwiftyJSON
 
 
-class ViewController: UIViewController,  ORKTaskViewControllerDelegate {
+class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate {
 
     /**
      When a task is completed, the `ViewController` calls this closure
