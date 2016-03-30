@@ -38,5 +38,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We use Apple&apos;s location services to provide your geographic location information when you are participating in our study. This data is immensely valuable to our researchers.</string>
 </dict>
 </plist>

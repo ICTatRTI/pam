@@ -11,27 +11,38 @@ import UIKit
 import ResearchKit
 import Alamofire
 import SwiftyJSON
+import CoreLocation
 
 
-class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate {
+class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CLLocationManagerDelegate {
 
     /**
      When a task is completed, the `ViewController` calls this closure
      with the created task.
      */
     var taskResultFinishedCompletionHandler: (ORKResult -> Void)?
+    var locationManager: CLLocationManager!
+    var txtLatitude, txtLongitude
+    var locationFixAchieved : Bool = false
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Try to get users location
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationFixAchieved = false
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
     }
+    
     
     override func viewDidAppear(animated: Bool) {
         
         
         let task = ORKOrderedTask(identifier: "task", steps: [instructionStep, pamOptionStep, summaryStep])
-        
         
         /*
         Passing `nil` for the `taskRunUUID` lets the task view controller
@@ -43,19 +54,31 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate {
         presentViewController(taskViewController, animated: true, completion: nil)
     }
 
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if (locationFixAchieved == false) {
+            locationFixAchieved = true
+            let locationArray = locations as NSArray
+            let locationObj = locationArray.lastObject as! CLLocation
+            let coord = locationObj.coordinate
+            
+            txtLatitude = coord.latitude
+            txtLongitude = coord.longitude
+        }
+        
+    }
     
     
     func taskViewController(taskViewController: ORKTaskViewController,
         didFinishWithReason reason: ORKTaskViewControllerFinishReason,
         error: NSError?) {
             
-            
-            
             let parameters = [
                 "username": "researcher",
                 "password": "1234thumbwar"
             ]
-            
+        
+            var token = ""
             
             // Won't need to do this, figure out some way of caching the token
             Alamofire.request(.POST, "https://researchnet.ictedge.org/api-token-auth/", parameters: parameters).responseJSON { response in
@@ -68,14 +91,16 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate {
                 print(response.result)   // result of response serialization
                 
                 if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                   token = JSON["token"]
                 }
             }
             
             
             var responsejson: JSON =  [:]
             responsejson["device_id"].stringValue = UIDevice.currentDevice().identifierForVendor!.UUIDString
-            
+            responsejson["lat"].stringValue = txtLatitude
+            responsejson["long"].stringValue = txtLongitude
+    
             let taskResult = taskViewController.result // this should be a ORKTaskResult
             let results = taskResult.results as! [ORKStepResult]//[ORKStepResult]
             
@@ -113,11 +138,10 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate {
             
             
             let headers = [
-                "Authorization": "Token b8fba8a491c4b783b7e0bb9342e6e8b27f2b0cd1"
+                "Authorization": "Token " + token
             ]
             
-            debugPrint(responsejson)
-            
+        
             
             Alamofire.request(.POST, "https://researchnet.ictedge.org/submission/", headers: headers, parameters: responsejson.dictionaryObject ,encoding: .JSON).responseJSON { response in
                 
