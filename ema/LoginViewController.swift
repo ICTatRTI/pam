@@ -31,12 +31,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func login() {
     
-        
         let parameters = [
             "username": username.text!,
             "password": password.text!
         ]
-        
         
         // Won't need to do this, figure out some way of caching the token
         Alamofire.request(.POST, "https://researchnet.ictedge.org/api-token-auth/", parameters: parameters).responseJSON { response in switch response.result {
@@ -56,6 +54,7 @@ class LoginViewController: UIViewController {
                     self.presentViewController(alert, animated: true, completion: nil)
                 } else {
                     print("Logged in")
+                    
                 }
             
             case .Failure(let error):

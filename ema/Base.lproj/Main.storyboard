@@ -36,18 +36,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enroll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjk-cF-uXS">
-                                <rect key="frame" x="203" y="102" width="43" height="21"/>
+                                <rect key="frame" x="173" y="125" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzW-9h-BRG">
-                                <rect key="frame" x="277" y="537" width="39" height="30"/>
-                                <state key="normal" title="Enroll"/>
-                                <connections>
-                                    <action selector="enroll" destination="dNB-0q-rZ1" eventType="touchUpInside" id="NmB-J3-hbb"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z09-qK-YJd">
                                 <rect key="frame" x="63" y="181" width="263" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -56,7 +49,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xu6-O3-jhV">
                                 <rect key="frame" x="63" y="217" width="263" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMw-0d-F1Q">
                                 <rect key="frame" x="63" y="251" width="263" height="30"/>
@@ -78,9 +71,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzW-9h-BRG">
+                                <rect key="frame" x="281" y="500" width="39" height="30"/>
+                                <state key="normal" title="Enroll"/>
+                                <connections>
+                                    <action selector="enroll" destination="dNB-0q-rZ1" eventType="touchUpInside" id="NmB-J3-hbb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="608-hf-T3o" id="3By-HV-4lF"/>
+                        <outlet property="firstname" destination="wMw-0d-F1Q" id="ZjV-Ae-XMp"/>
+                        <outlet property="gender" destination="nm1-ZE-KCg" id="yDu-lP-G0J"/>
+                        <outlet property="lastname" destination="cr7-XN-3Cr" id="Pgv-UW-HGC"/>
+                        <outlet property="password" destination="xu6-O3-jhV" id="ngY-iA-Rhe"/>
+                        <outlet property="username" destination="Z09-qK-YJd" id="4EU-X3-CNz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPe-Hb-i5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
