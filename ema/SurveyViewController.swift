@@ -14,17 +14,17 @@ import SwiftyJSON
 import CoreLocation
 
 
-class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CLLocationManagerDelegate {
 
+class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CLLocationManagerDelegate {
     /**
      When a task is completed, the `ViewController` calls this closure
      with the created task.
      */
     var taskResultFinishedCompletionHandler: (ORKResult -> Void)?
     var locationManager: CLLocationManager!
-    var txtLatitude, txtLongitude
     var locationFixAchieved : Bool = false
-
+    var txtLatitude: Double = 0.0
+    var txtLongitude: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,16 +44,16 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CL
         
         let task = ORKOrderedTask(identifier: "task", steps: [instructionStep, pamOptionStep, summaryStep])
         
+        
         /*
-        Passing `nil` for the `taskRunUUID` lets the task view controller
-        generate an identifier for this run of the task.
-        */
+         Passing `nil` for the `taskRunUUID` lets the task view controller
+         generate an identifier for this run of the task.
+         */
         let taskViewController = ORKTaskViewController(task: task, taskRunUUID: nil)
         taskViewController.delegate = self
         
         presentViewController(taskViewController, animated: true, completion: nil)
     }
-
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if (locationFixAchieved == false) {
@@ -68,115 +68,116 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CL
         
     }
     
-    
     func taskViewController(taskViewController: ORKTaskViewController,
-        didFinishWithReason reason: ORKTaskViewControllerFinishReason,
-        error: NSError?) {
-            
-            let parameters = [
-                "username": "researcher",
-                "password": "1234thumbwar"
-            ]
+                            didFinishWithReason reason: ORKTaskViewControllerFinishReason,
+                                                error: NSError?) {
         
-            var token = ""
-            
-            // Won't need to do this, figure out some way of caching the token
-            Alamofire.request(.POST, "https://researchnet.ictedge.org/api-token-auth/", parameters: parameters).responseJSON { response in
-                
-                debugPrint(response)     // prints detailed description of all response properties
-                
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
-                   token = JSON["token"]
-                }
-            }
-            
-            
-            var responsejson: JSON =  [:]
-            responsejson["device_id"].stringValue = UIDevice.currentDevice().identifierForVendor!.UUIDString
-            responsejson["lat"].stringValue = txtLatitude
-            responsejson["long"].stringValue = txtLongitude
-    
-            let taskResult = taskViewController.result // this should be a ORKTaskResult
-            let results = taskResult.results as! [ORKStepResult]//[ORKStepResult]
-            
-            var responses: [String:String] = [:]
-            
-            
-            for thisStepResult in results { // [ORKStepResults]
-                
-                let stepResults = thisStepResult.results as! [ORKQuestionResult]
-                
-                /*
-                    Go through the supported answer formats.  This is made easier with AppCore but we're not using this for now just because a) its in objective C and kind of hard to use and 2) its going away at some point to be replaced with enhancements to the ResearchKit framework
-                
-                */
-                if let scaleresult = stepResults.first as? ORKScaleQuestionResult
-                {
-                    if scaleresult.scaleAnswer != nil
-                    {
-                        responses[scaleresult.identifier] = (scaleresult.scaleAnswer?.stringValue)!
-                    }
-                }
-                
-                if let choiceresult = stepResults.first as? ORKChoiceQuestionResult
-                {
-                    if choiceresult.choiceAnswers != nil
-                    {
-                        let selected = choiceresult.choiceAnswers!
-                        responses[choiceresult.identifier] = "\(selected.first!)"
-                    }
-                }
-                
-                responsejson["response"].dictionaryObject = responses
-                
-            }
-            
-            
-            let headers = [
-                "Authorization": "Token " + token
-            ]
-            
         
+        
+        let parameters = [
+            "username": "researcher",
+            "password": "1234thumbwar"
+        ]
+        
+        
+        // Won't need to do this, figure out some way of caching the token
+        Alamofire.request(.POST, "https://researchnet.ictedge.org/api-token-auth/", parameters: parameters).responseJSON { response in
             
-            Alamofire.request(.POST, "https://researchnet.ictedge.org/submission/", headers: headers, parameters: responsejson.dictionaryObject ,encoding: .JSON).responseJSON { response in
-                
-                debugPrint(response)     // prints detailed description of all response properties
-                
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
-                
+            debugPrint(response)     // prints detailed description of all response properties
+            
+            print(response.request)  // original URL request
+            print(response.response) // URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
             }
+        }
+        
+        
+        var responsejson: JSON =  [:]
+        responsejson["device_id"].stringValue = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        responsejson["lat"].stringValue = String(txtLatitude)
+        responsejson["long"].stringValue = String(txtLongitude)
+        
+        let taskResult = taskViewController.result // this should be a ORKTaskResult
+        let results = taskResult.results as! [ORKStepResult]//[ORKStepResult]
+        
+        var responses: [String:String] = [:]
+        
+        
+        for thisStepResult in results { // [ORKStepResults]
+            
+            let stepResults = thisStepResult.results as! [ORKQuestionResult]
             
             /*
-            The `reason` passed to this method indicates why the task view
-            controller finished: Did the user cancel, save, or actually complete
-            the task; or was there an error?
+             Go through the supported answer formats.  This is made easier with AppCore but we're not using this for now just because a) its in objective C and kind of hard to use and 2) its going away at some point to be replaced with enhancements to the ResearchKit framework
+             
+             */
+            if let scaleresult = stepResults.first as? ORKScaleQuestionResult
+            {
+                if scaleresult.scaleAnswer != nil
+                {
+                    responses[scaleresult.identifier] = (scaleresult.scaleAnswer?.stringValue)!
+                }
+            }
             
-            */
+            if let choiceresult = stepResults.first as? ORKChoiceQuestionResult
+            {
+                if choiceresult.choiceAnswers != nil
+                {
+                    let selected = choiceresult.choiceAnswers!
+                    responses[choiceresult.identifier] = "\(selected.first!)"
+                }
+            }
             
-            taskResultFinishedCompletionHandler?(taskViewController.result)
+            responsejson["response"].dictionaryObject = responses
             
+        }
+        
+        
+        let headers = [
+            "Authorization": "Token b8fba8a491c4b783b7e0bb9342e6e8b27f2b0cd1"
+        ]
+        
+        debugPrint(responsejson)
+        
+        
+        Alamofire.request(.POST, "https://researchnet.ictedge.org/submission/", headers: headers, parameters: responsejson.dictionaryObject ,encoding: .JSON).responseJSON { response in
             
-            // Then, dismiss the task view controller.
-            dismissViewControllerAnimated(true, completion: nil)
+            debugPrint(response)     // prints detailed description of all response properties
+            
+            print(response.request)  // original URL request
+            print(response.response) // URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+            
+        }
+        
+        /*
+         The `reason` passed to this method indicates why the task view
+         controller finished: Did the user cancel, save, or actually complete
+         the task; or was there an error?
+         
+         */
+        
+        taskResultFinishedCompletionHandler?(taskViewController.result)
+        
+        
+        // Then, dismiss the task view controller.
+        dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     
     func taskResultFinishedCompletionHandler(_: ORKResult -> Void) {
         print("I am done")
@@ -209,7 +210,7 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CL
         return instructionStep
         
     }
-   
+    
     
     /**
      This step demonstrates a survey question for assessing a Photographic Affect Meter (PAM)
@@ -242,8 +243,8 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CL
         return pamQuestionStep
     }
     
-   
-
-
+    
+    
+    
 }
 
