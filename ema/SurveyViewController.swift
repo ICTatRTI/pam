@@ -73,27 +73,7 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CL
                                                 error: NSError?) {
         
         
-        
-        let parameters = [
-            "username": "researcher",
-            "password": "1234thumbwar"
-        ]
-        
-        
-        // Won't need to do this, figure out some way of caching the token
-        Alamofire.request(.POST, "https://researchnet.ictedge.org/api-token-auth/", parameters: parameters).responseJSON { response in
-            
-            debugPrint(response)     // prints detailed description of all response properties
-            
-            print(response.request)  // original URL request
-            print(response.response) // URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
-        }
+      
         
         
         var responsejson: JSON =  [:]
