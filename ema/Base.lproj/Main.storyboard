@@ -7,7 +7,7 @@
         <!--Survey View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SurveyViewController" customModule="Pam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="survey" id="BYZ-38-t0r" customClass="SurveyViewController" customModule="Pam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -72,7 +72,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzW-9h-BRG">
-                                <rect key="frame" x="281" y="500" width="39" height="30"/>
+                                <rect key="frame" x="281" y="463" width="39" height="30"/>
                                 <state key="normal" title="Enroll"/>
                                 <connections>
                                     <action selector="enroll" destination="dNB-0q-rZ1" eventType="touchUpInside" id="NmB-J3-hbb"/>
@@ -141,7 +141,7 @@
         <!--The Photographic Affect Meter-->
         <scene sceneID="kX9-zM-LwN">
             <objects>
-                <viewController id="Di6-r6-Zho" customClass="LoginViewController" customModule="Pam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="Di6-r6-Zho" customClass="LoginViewController" customModule="Pam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gw4-gF-2L7"/>
                         <viewControllerLayoutGuide type="bottom" id="Pjb-Cs-Pa7"/>
@@ -155,13 +155,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYK-Zv-RgB">
-                                <rect key="frame" x="272" y="424" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="login" destination="Di6-r6-Zho" eventType="touchUpInside" id="J8g-wv-SZ9"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucf-1r-h5o">
                                 <rect key="frame" x="181" y="187" width="71" height="36"/>
                                 <attributedString key="attributedText">
@@ -184,13 +177,6 @@
                                     <segue destination="dNB-0q-rZ1" kind="show" id="poy-Ja-rYc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICM-es-D6f">
-                                <rect key="frame" x="242" y="544" width="109" height="30"/>
-                                <state key="normal" title="Just keep going"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="odK-wU-mm4"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLG-Ki-vFM">
                                 <rect key="frame" x="104" y="544" width="115" height="30"/>
                                 <state key="normal" title="Forgot Password"/>
@@ -203,6 +189,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYK-Zv-RgB">
+                                <rect key="frame" x="272" y="414" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login" destination="Di6-r6-Zho" eventType="touchUpInside" id="J8g-wv-SZ9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

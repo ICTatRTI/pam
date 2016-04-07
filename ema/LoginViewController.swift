@@ -52,14 +52,20 @@ class LoginViewController: UIViewController {
                     alert.addAction(action)
                     
                     self.presentViewController(alert, animated: true, completion: nil)
-                } else {
-                    print("Logged in")
+                } else { // Sucessussful Login
+                    
+                    print("logged in, there")
+                    
+                    // Go to survey 
+                    let surveyPageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("survey") as! SurveyViewController
+                    
+                    self.presentViewController(surveyPageViewController, animated: false, completion: nil)
                     
                 }
             
             case .Failure(let error):
                 
-                let alert = UIAlertController(title: "Login", message: "\(error)", preferredStyle: .Alert)
+                let alert = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .Alert)
                 
                 let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
                 alert.addAction(action)

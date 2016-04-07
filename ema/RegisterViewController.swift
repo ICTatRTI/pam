@@ -37,30 +37,54 @@ class RegisterViewController: UIViewController {
         let parameters = [
             "username": username.text!,
             "password": password.text!,
+            "email": email.text!,
             "first_name": firstname.text!,
             "last_name": lastname.text!,
             "gender": gender.text!,
-            "dob": "05-18-1977"
+            "dob": "1977-05-18"
             
         ]
         
         // Won't need to do this, figure out some way of caching the token
         Alamofire.request(.POST, "https://researchnet.ictedge.org/participant/", parameters: parameters).responseJSON { response in switch response.result {
             
-        case .Success(let data):
+        case .Success:
+        
+            if let httpError = response.result.error {
+                let statusCode = httpError.code
+                let alert = UIAlertController(title: "Error", message: "An error \(statusCode) occured. Please contact your study administrator.", preferredStyle: .Alert)
+                let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            } else { //no (really bad) errors
+                let statusCode = (response.response?.statusCode)!
+                if statusCode >= 400 {
+               
+                    let alert = UIAlertController(title: "Error", message: "All fields are required", preferredStyle: .Alert)
+                    let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                    alert.addAction(action)
+                    self.presentViewController(alert, animated: true, completion: nil)
+
+                } else{
+                    print("back to the login screen... ", statusCode)
+                    let loginViewController = self.storyboard?.instantiateViewControllerWithIdentifier("login") as! LoginViewController
+                    
+                    self.presentViewController(loginViewController, animated: false, completion: nil)
+                }
+                
+            }
             
-            let json = JSON(data)
-            // go back to the login screen
+
+        case .Failure:
             
-        case .Failure(let error):
-            
-            let alert = UIAlertController(title: "Login", message: "\(error)", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Error", message: "Something is all messed up on the server. Please contact your study administrator.", preferredStyle: .Alert)
             
             let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
             alert.addAction(action)
             
             self.presentViewController(alert, animated: true, completion: nil)
-            print("Request failed with error: \(error)")
+         
             }
             
             
