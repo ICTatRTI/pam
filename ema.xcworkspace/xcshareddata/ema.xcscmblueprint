@@ -5,12 +5,14 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "799BBB434ABAB3DD6BA28CE4CCA0153C4EA85F62" : 0,
-    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : 0
+    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : 0,
+    "7E006FBB58D0B7100641E325E5A147EAE624D3B8" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "806B2D63-44CD-4F57-B905-2CB4AEE2C38A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "799BBB434ABAB3DD6BA28CE4CCA0153C4EA85F62" : "pam\/",
-    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : "ResearchKit\/"
+    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : "ResearchKit\/",
+    "7E006FBB58D0B7100641E325E5A147EAE624D3B8" : "ResearchnetSDK-IOS\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ema",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -20,6 +22,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:rcdrti\/pam.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "799BBB434ABAB3DD6BA28CE4CCA0153C4EA85F62"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:rcdrti\/researchnetsdk-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E006FBB58D0B7100641E325E5A147EAE624D3B8"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ICTatRTI\/ResearchKit.git",
