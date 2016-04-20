@@ -28,6 +28,9 @@
 		4BADFCB51CC8281B00B949D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB41CC8281B00B949D2 /* LoginViewController.swift */; };
 		4BADFCB71CC8287C00B949D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB61CC8287C00B949D2 /* MainViewController.swift */; };
 		4BADFCB91CC8298800B949D2 /* ResearchContainerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB81CC8298800B949D2 /* ResearchContainerSegue.swift */; };
+		4BADFCBC1CC83C7600B949D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCBB1CC83C7600B949D2 /* ProfileViewController.swift */; };
+		4BADFCBE1CC83CBB00B949D2 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCBD1CC83CBB00B949D2 /* ProfileHeaderView.swift */; };
+		4BADFCC01CC83CE600B949D2 /* ProfileStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCBF1CC83CE600B949D2 /* ProfileStaticTableViewCell.swift */; };
 		4BB156DE1C7E5183002A1EAA /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5183D31C7E50B900A9379D /* ResearchKit.framework */; };
 		4BB156DF1C7E5183002A1EAA /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5183D31C7E50B900A9379D /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BB8B3121BC81FCD0056324B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3111BC81FCD0056324B /* AppDelegate.swift */; };
@@ -178,6 +181,9 @@
 		4BADFCB41CC8281B00B949D2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4BADFCB61CC8287C00B949D2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4BADFCB81CC8298800B949D2 /* ResearchContainerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchContainerSegue.swift; sourceTree = "<group>"; };
+		4BADFCBB1CC83C7600B949D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4BADFCBD1CC83CBB00B949D2 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		4BADFCBF1CC83CE600B949D2 /* ProfileStaticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileStaticTableViewCell.swift; sourceTree = "<group>"; };
 		4BB8B30E1BC81FCD0056324B /* Pam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB8B3111BC81FCD0056324B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB8B3131BC81FCD0056324B /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
@@ -309,6 +315,9 @@
 		4BADFCA71CC823B700B949D2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4BADFCBB1CC83C7600B949D2 /* ProfileViewController.swift */,
+				4BADFCBD1CC83CBB00B949D2 /* ProfileHeaderView.swift */,
+				4BADFCBF1CC83CE600B949D2 /* ProfileStaticTableViewCell.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -806,6 +815,9 @@
 				4BB8B3141BC81FCD0056324B /* SurveyViewController.swift in Sources */,
 				4BB8B3121BC81FCD0056324B /* AppDelegate.swift in Sources */,
 				4BB8B31A1BC81FCD0056324B /* ema.xcdatamodeld in Sources */,
+				4BADFCBC1CC83C7600B949D2 /* ProfileViewController.swift in Sources */,
+				4BADFCBE1CC83CBB00B949D2 /* ProfileHeaderView.swift in Sources */,
+				4BADFCC01CC83CE600B949D2 /* ProfileStaticTableViewCell.swift in Sources */,
 				4BADFCB31CC827C900B949D2 /* OnboardingViewController.swift in Sources */,
 				4BADFCAF1CC825CC00B949D2 /* ConsentDocument.swift in Sources */,
 			);
