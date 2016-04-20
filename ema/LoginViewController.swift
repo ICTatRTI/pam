@@ -1,91 +1,108 @@
 //
-//  LoginViewController.swift
+//  LoginViewController2.swift
 //  ema
 //
-//  Created by Adam Preston on 3/1/16.
+//  Created by Adam Preston on 4/20/16.
 //  Copyright © 2016 RTI. All rights reserved.
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
-import ResearchNet
-
+import ResearchKit
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
     
-    @IBAction func login() {
-    
-        let parameters = [
-            "username": username.text!,
-            "password": password.text!
-        ]
-        
-        // Won't need to do this, figure out some way of caching the token
-        Alamofire.request(.POST, "https://researchnet.ictedge.org/api-token-auth/", parameters: parameters).responseJSON { response in switch response.result {
-            
-            case .Success(let data):
-
-                let json = JSON(data)
-                let token = json["token"].stringValue
-                
-                if token == "" {
-                    
-                    let alert = UIAlertController(title: "Login", message: "Unable to log in with provided credentials", preferredStyle: .Alert)
-                    
-                    let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
-                    alert.addAction(action)
-                    
-                    self.presentViewController(alert, animated: true, completion: nil)
-                } else { // Sucessussful Login
-                    
-                    print("logged in, there")
-                    
-                    // Go to survey 
-                    let surveyPageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("survey") as! SurveyViewController
-                    
-                    self.presentViewController(surveyPageViewController, animated: false, completion: nil)
-                    
-                }
-            
-            case .Failure(let error):
-                
-                let alert = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .Alert)
-                
-                let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
-                alert.addAction(action)
-                
+    /// This tasks presents the login step.
+    private var loginTask: ORKTask {
+        /*
+         A login step view controller subclass is required in order to use the login step.
+         The subclass provides the behavior for the login step forgot password button.
+         */
+        class LoginViewController : ORKLoginStepViewController {
+            override func forgotPasswordButtonTapped() {
+                let alertTitle = NSLocalizedString("Forgot password?", comment: "")
+                let alertMessage = NSLocalizedString("Button tapped", comment: "")
+                let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
-                print("Request failed with error: \(error)")
             }
-        
-
         }
         
+        /*
+         A login step provides a form step that is populated with email and password fields,
+         and a button for `Forgot password?`.
+         */
+        let loginTitle = NSLocalizedString("Login", comment: "")
+        let loginStep = ORKLoginStep(identifier: String("login step"), title: loginTitle, text: "", loginViewControllerClass: LoginViewController.self)
+        
+        /*
+         A wait step allows you to validate the data from the user login against your server before proceeding.
+         */
+        let waitTitle = NSLocalizedString("Logging in", comment: "")
+        let waitText = NSLocalizedString("Please wait while we validate your credentials", comment: "")
+        let waitStep = ORKWaitStep(identifier: String("wait_login"))
+        waitStep.title = waitTitle
+        waitStep.text = waitText
+        
+        
+        
+        return ORKOrderedTask(identifier: String("login stask"), steps: [loginStep, waitStep])
+    }
+    
+    // Used to wait an arbitrary length of time
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    // MARK: Transitions
+    
+    func toStudy() {
+        performSegueWithIdentifier("unwindToStudy", sender: nil)
+    }
+    
+}
+
+extension LoginViewController : ORKTaskViewControllerDelegate {
+    
+    func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
+        switch reason {
+        case .Completed:
+            
+            // put calls to backend here
+            // performSegueWithIdentifier("toStudyAfterLogin", sender: self)
+            toStudy()
+            
+        case .Discarded, .Failed, .Saved:
+            
+            dismissViewControllerAnimated(true, completion: nil)
+            print("dismissed")
+            performSegueWithIdentifier("unwindToOnboarding", sender: nil)
+            
+        }
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        let taskViewController = ORKTaskViewController(task: loginTask, taskRunUUID: nil)
+        taskViewController.delegate = self
+        
+        presentViewController(taskViewController, animated: true, completion: nil)
         
     }
     
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
+    func taskViewController(taskViewController: ORKTaskViewController, stepViewControllerWillAppear stepViewController: ORKStepViewController) {
+        
+        delay(5.0, closure: { () -> () in
+            if let stepViewController = stepViewController as? ORKWaitStepViewController {
+                stepViewController.goForward()
+            }
+        })
     }
-
-
+    
 }

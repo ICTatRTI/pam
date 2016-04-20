@@ -20,6 +20,14 @@
 		4B88C7B01C7B9F2E003F3397 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88C7AF1C7B9F2E003F3397 /* NotificationController.swift */; };
 		4B88C7B21C7B9F2E003F3397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B88C7B11C7B9F2E003F3397 /* Assets.xcassets */; };
 		4B88C7B61C7B9F2E003F3397 /* watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4B88C7981C7B9F2D003F3397 /* watch.app */; };
+		4BADFCA61CC8239800B949D2 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCA51CC8239800B949D2 /* WithdrawViewController.swift */; };
+		4BADFCAA1CC8243100B949D2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCA91CC8243100B949D2 /* ActivityViewController.swift */; };
+		4BADFCAC1CC8247800B949D2 /* StudyTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCAB1CC8247800B949D2 /* StudyTasks.swift */; };
+		4BADFCAF1CC825CC00B949D2 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCAE1CC825CC00B949D2 /* ConsentDocument.swift */; };
+		4BADFCB31CC827C900B949D2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB21CC827C900B949D2 /* OnboardingViewController.swift */; };
+		4BADFCB51CC8281B00B949D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB41CC8281B00B949D2 /* LoginViewController.swift */; };
+		4BADFCB71CC8287C00B949D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB61CC8287C00B949D2 /* MainViewController.swift */; };
+		4BADFCB91CC8298800B949D2 /* ResearchContainerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB81CC8298800B949D2 /* ResearchContainerSegue.swift */; };
 		4BB156DE1C7E5183002A1EAA /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5183D31C7E50B900A9379D /* ResearchKit.framework */; };
 		4BB156DF1C7E5183002A1EAA /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5183D31C7E50B900A9379D /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BB8B3121BC81FCD0056324B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3111BC81FCD0056324B /* AppDelegate.swift */; };
@@ -30,8 +38,6 @@
 		4BB8B31F1BC81FCD0056324B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB8B31D1BC81FCD0056324B /* LaunchScreen.storyboard */; };
 		4BB8B32A1BC81FCD0056324B /* emaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3291BC81FCD0056324B /* emaTests.swift */; };
 		4BB8B3351BC81FCD0056324B /* emaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3341BC81FCD0056324B /* emaUITests.swift */; };
-		4BBA6E2F1C8644450082F181 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA6E2E1C8644450082F181 /* LoginViewController.swift */; };
-		4BBA6E331C8646480082F181 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA6E321C8646480082F181 /* RegisterViewController.swift */; };
 		4BBA6E351C865FB30082F181 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA6E341C865FB30082F181 /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +170,14 @@
 		4B88C7AF1C7B9F2E003F3397 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		4B88C7B11C7B9F2E003F3397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B88C7B31C7B9F2E003F3397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BADFCA51CC8239800B949D2 /* WithdrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
+		4BADFCA91CC8243100B949D2 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		4BADFCAB1CC8247800B949D2 /* StudyTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyTasks.swift; sourceTree = "<group>"; };
+		4BADFCAE1CC825CC00B949D2 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		4BADFCB21CC827C900B949D2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		4BADFCB41CC8281B00B949D2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4BADFCB61CC8287C00B949D2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4BADFCB81CC8298800B949D2 /* ResearchContainerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchContainerSegue.swift; sourceTree = "<group>"; };
 		4BB8B30E1BC81FCD0056324B /* Pam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB8B3111BC81FCD0056324B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB8B3131BC81FCD0056324B /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
@@ -178,8 +192,6 @@
 		4BB8B3301BC81FCD0056324B /* emaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB8B3341BC81FCD0056324B /* emaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emaUITests.swift; sourceTree = "<group>"; };
 		4BB8B3361BC81FCD0056324B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BBA6E2E1C8644450082F181 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4BBA6E321C8646480082F181 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4BBA6E341C865FB30082F181 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		8A8F002664F389DF76A9F10A /* Pods-ema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ema.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ema/Pods-ema.debug.xcconfig"; sourceTree = "<group>"; };
 		8DD4414F9975408D1E305F2E /* Pods-emaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emaTests/Pods-emaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -286,6 +298,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4BADFCA11CC8235A00B949D2 /* Withdrawl */ = {
+			isa = PBXGroup;
+			children = (
+				4BADFCA51CC8239800B949D2 /* WithdrawViewController.swift */,
+			);
+			name = Withdrawl;
+			sourceTree = "<group>";
+		};
+		4BADFCA71CC823B700B949D2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		4BADFCA81CC823D700B949D2 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				4BADFCA91CC8243100B949D2 /* ActivityViewController.swift */,
+				4BADFCAB1CC8247800B949D2 /* StudyTasks.swift */,
+			);
+			name = Activities;
+			sourceTree = "<group>";
+		};
+		4BADFCAD1CC824D500B949D2 /* Consent */ = {
+			isa = PBXGroup;
+			children = (
+				4BADFCAE1CC825CC00B949D2 /* ConsentDocument.swift */,
+			);
+			name = Consent;
+			sourceTree = "<group>";
+		};
+		4BADFCB11CC8272200B949D2 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4BADFCB21CC827C900B949D2 /* OnboardingViewController.swift */,
+				4BADFCB41CC8281B00B949D2 /* LoginViewController.swift */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
 		4BB8B3051BC81FCD0056324B = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +370,11 @@
 		4BB8B3101BC81FCD0056324B /* ema */ = {
 			isa = PBXGroup;
 			children = (
+				4BADFCA81CC823D700B949D2 /* Activities */,
+				4BADFCAD1CC824D500B949D2 /* Consent */,
+				4BADFCA71CC823B700B949D2 /* Profile */,
+				4BADFCB11CC8272200B949D2 /* Onboarding */,
+				4BADFCA11CC8235A00B949D2 /* Withdrawl */,
 				4BB8B3111BC81FCD0056324B /* AppDelegate.swift */,
 				4BB8B3131BC81FCD0056324B /* SurveyViewController.swift */,
 				4BB8B3151BC81FCD0056324B /* Main.storyboard */,
@@ -324,9 +382,9 @@
 				4BB8B31D1BC81FCD0056324B /* LaunchScreen.storyboard */,
 				4BB8B3201BC81FCD0056324B /* Info.plist */,
 				4BB8B3181BC81FCD0056324B /* ema.xcdatamodeld */,
-				4BBA6E2E1C8644450082F181 /* LoginViewController.swift */,
-				4BBA6E321C8646480082F181 /* RegisterViewController.swift */,
 				4BBA6E341C865FB30082F181 /* ForgotPasswordViewController.swift */,
+				4BADFCB61CC8287C00B949D2 /* MainViewController.swift */,
+				4BADFCB81CC8298800B949D2 /* ResearchContainerSegue.swift */,
 			);
 			path = ema;
 			sourceTree = "<group>";
@@ -738,12 +796,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BBA6E2F1C8644450082F181 /* LoginViewController.swift in Sources */,
-				4BBA6E331C8646480082F181 /* RegisterViewController.swift in Sources */,
+				4BADFCB71CC8287C00B949D2 /* MainViewController.swift in Sources */,
+				4BADFCAC1CC8247800B949D2 /* StudyTasks.swift in Sources */,
+				4BADFCB91CC8298800B949D2 /* ResearchContainerSegue.swift in Sources */,
+				4BADFCB51CC8281B00B949D2 /* LoginViewController.swift in Sources */,
+				4BADFCA61CC8239800B949D2 /* WithdrawViewController.swift in Sources */,
+				4BADFCAA1CC8243100B949D2 /* ActivityViewController.swift in Sources */,
 				4BBA6E351C865FB30082F181 /* ForgotPasswordViewController.swift in Sources */,
 				4BB8B3141BC81FCD0056324B /* SurveyViewController.swift in Sources */,
 				4BB8B3121BC81FCD0056324B /* AppDelegate.swift in Sources */,
 				4BB8B31A1BC81FCD0056324B /* ema.xcdatamodeld in Sources */,
+				4BADFCB31CC827C900B949D2 /* OnboardingViewController.swift in Sources */,
+				4BADFCAF1CC825CC00B949D2 /* ConsentDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

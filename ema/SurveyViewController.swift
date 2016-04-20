@@ -44,16 +44,13 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CL
         
         let task = ORKOrderedTask(identifier: "task", steps: [instructionStep, pamOptionStep, summaryStep])
         
-        
-        /*
-         Passing `nil` for the `taskRunUUID` lets the task view controller
-         generate an identifier for this run of the task.
-         */
         let taskViewController = ORKTaskViewController(task: task, taskRunUUID: nil)
         taskViewController.delegate = self
         
         presentViewController(taskViewController, animated: true, completion: nil)
     }
+    
+    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if (locationFixAchieved == false) {
