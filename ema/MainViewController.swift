@@ -47,6 +47,7 @@ class MainViewController: UIViewController {
     }
     
     func toStudy() {
+        print("to study i go")
         performSegueWithIdentifier("toStudy", sender: self)
     }
     

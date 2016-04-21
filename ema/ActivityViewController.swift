@@ -10,8 +10,7 @@ import UIKit
 import ResearchKit
 
 enum Activity: Int {
-    case WeekdaySurvey, WeekendSurvey
-    
+    case PAMSurvey
     static var allValues: [Activity] {
         var idx = 0
         return Array(AnyGenerator{ return self.init(rawValue: idx++)})
@@ -19,19 +18,15 @@ enum Activity: Int {
     
     var title: String {
         switch self {
-        case .WeekdaySurvey:
-            return "Weekday Survey"
-        case .WeekendSurvey:
-            return "Weekend Survey"
+        case .PAMSurvey:
+            return "PAM Survey"
         }
     }
     
     var subtitle: String {
         switch self {
-        case .WeekdaySurvey:
-            return "Answer 6 short questions"
-        case .WeekendSurvey:
-            return "Voice evaluation"
+        case .PAMSurvey:
+            return "Answer a couple of questions"
         }
     }
 }
@@ -63,10 +58,8 @@ class ActivityViewController: UITableViewController {
         
         let taskViewController: ORKTaskViewController
         switch activity {
-        case .WeekdaySurvey:
+        case .PAMSurvey:
             taskViewController = ORKTaskViewController(task: StudyTasks.surveyTask, taskRunUUID: NSUUID())
-        case .WeekendSurvey:
-            taskViewController = ORKTaskViewController(task: StudyTasks.surveyWeekendTask, taskRunUUID: NSUUID())
             
         }
         
