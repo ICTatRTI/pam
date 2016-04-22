@@ -41,7 +41,6 @@
 		4BB8B31F1BC81FCD0056324B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB8B31D1BC81FCD0056324B /* LaunchScreen.storyboard */; };
 		4BB8B32A1BC81FCD0056324B /* emaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3291BC81FCD0056324B /* emaTests.swift */; };
 		4BB8B3351BC81FCD0056324B /* emaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3341BC81FCD0056324B /* emaUITests.swift */; };
-		4BBA6E351C865FB30082F181 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA6E341C865FB30082F181 /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,7 +197,6 @@
 		4BB8B3301BC81FCD0056324B /* emaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB8B3341BC81FCD0056324B /* emaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emaUITests.swift; sourceTree = "<group>"; };
 		4BB8B3361BC81FCD0056324B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BBA6E341C865FB30082F181 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		8A8F002664F389DF76A9F10A /* Pods-ema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ema.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ema/Pods-ema.debug.xcconfig"; sourceTree = "<group>"; };
 		8DD4414F9975408D1E305F2E /* Pods-emaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emaTests/Pods-emaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9948FF11EE126EDD23BC8134 /* Pods_emaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -391,7 +389,6 @@
 				4BB8B31D1BC81FCD0056324B /* LaunchScreen.storyboard */,
 				4BB8B3201BC81FCD0056324B /* Info.plist */,
 				4BB8B3181BC81FCD0056324B /* ema.xcdatamodeld */,
-				4BBA6E341C865FB30082F181 /* ForgotPasswordViewController.swift */,
 				4BADFCB61CC8287C00B949D2 /* MainViewController.swift */,
 				4BADFCB81CC8298800B949D2 /* ResearchContainerSegue.swift */,
 			);
@@ -811,7 +808,6 @@
 				4BADFCB51CC8281B00B949D2 /* LoginViewController.swift in Sources */,
 				4BADFCA61CC8239800B949D2 /* WithdrawViewController.swift in Sources */,
 				4BADFCAA1CC8243100B949D2 /* ActivityViewController.swift in Sources */,
-				4BBA6E351C865FB30082F181 /* ForgotPasswordViewController.swift in Sources */,
 				4BB8B3141BC81FCD0056324B /* SurveyViewController.swift in Sources */,
 				4BB8B3121BC81FCD0056324B /* AppDelegate.swift in Sources */,
 				4BB8B31A1BC81FCD0056324B /* ema.xcdatamodeld in Sources */,

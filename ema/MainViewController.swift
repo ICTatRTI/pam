@@ -39,6 +39,9 @@ class MainViewController: UIViewController {
     @IBAction func unwindToOnboarding(segue: UIStoryboardSegue) {
         toOnboarding()
     }
+    @IBAction func unwindToForgotPassword(segue: UIStoryboardSegue) {
+        toForgotPassword()
+    }
     
     // MARK: Transitions
     
@@ -47,17 +50,17 @@ class MainViewController: UIViewController {
     }
     
     func toStudy() {
-        print("to study i go")
         performSegueWithIdentifier("toStudy", sender: self)
     }
-    
-    
     
     func toWithdrawl() {
         let viewController = WithdrawViewController()
         viewController.delegate = self
-        
         presentViewController(viewController, animated: true, completion: nil)
+    }
+    
+    func toForgotPassword() {
+       performSegueWithIdentifier("toForgotPassword", sender: self)
     }
     
 }

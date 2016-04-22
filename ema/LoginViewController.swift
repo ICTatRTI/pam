@@ -11,6 +11,8 @@ import ResearchKit
 
 class LoginViewController: UIViewController {
     
+    func adam() {}
+    
     
     /// This tasks presents the login step.
     private var loginTask: ORKTask {
@@ -18,15 +20,24 @@ class LoginViewController: UIViewController {
          A login step view controller subclass is required in order to use the login step.
          The subclass provides the behavior for the login step forgot password button.
          */
-        class LoginViewController : ORKLoginStepViewController {
+        class RKLoginViewController : ORKLoginStepViewController {
             override func forgotPasswordButtonTapped() {
+                
                 let alertTitle = NSLocalizedString("Forgot password?", comment: "")
-                let alertMessage = NSLocalizedString("Button tapped", comment: "")
+                let alertMessage = NSLocalizedString("Please enter the email address your used to create your account", comment: "")
+
+                let passwordPrompt = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
                 
-                let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                passwordPrompt.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+                    textField.placeholder = "Email"
+                })
                 
-                self.presentViewController(alert, animated: true, completion: nil)
+                passwordPrompt.addAction(UIAlertAction(title: "Send", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                    let tf = passwordPrompt.textFields![0] as UITextField
+                    print("do stuff..like send an email with a new password " + tf.text! )
+                }))
+
+                self.presentViewController(passwordPrompt, animated: true, completion: nil)
             }
         }
         
@@ -35,7 +46,7 @@ class LoginViewController: UIViewController {
          and a button for `Forgot password?`.
          */
         let loginTitle = NSLocalizedString("Login", comment: "")
-        let loginStep = ORKLoginStep(identifier: String("login step"), title: loginTitle, text: "", loginViewControllerClass: LoginViewController.self)
+        let loginStep = ORKLoginStep(identifier: String("login step"), title: loginTitle, text: "", loginViewControllerClass: RKLoginViewController.self)
         
         /*
          A wait step allows you to validate the data from the user login against your server before proceeding.
@@ -45,7 +56,6 @@ class LoginViewController: UIViewController {
         let waitStep = ORKWaitStep(identifier: String("wait_login"))
         waitStep.title = waitTitle
         waitStep.text = waitText
-        
         
         
         return ORKOrderedTask(identifier: String("login stask"), steps: [loginStep, waitStep])
@@ -76,7 +86,6 @@ extension LoginViewController : ORKTaskViewControllerDelegate {
         case .Completed:
             
             // put calls to backend here
-            // performSegueWithIdentifier("toStudyAfterLogin", sender: self)
             toStudy()
             
         case .Discarded, .Failed, .Saved:
