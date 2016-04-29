@@ -10,6 +10,9 @@
 		0013745ECD3321CB4CC30815 /* Pods_ema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12825806D205C7C7DC9B7F21 /* Pods_ema.framework */; };
 		1F62761EC86FF7DE1CB7F181 /* libPods-emaUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A6A1AE4FE2EF8695B4ADAA /* libPods-emaUITests.a */; };
 		2A415ABAD6D5908A4CE7DF01 /* Pods_emaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9948FF11EE126EDD23BC8134 /* Pods_emaTests.framework */; };
+		4B0827AF1CD4016500A28F1C /* PamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0827AE1CD4016500A28F1C /* PamViewController.swift */; };
+		4B0827B11CD4031C00A28F1C /* PamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0827B01CD4031C00A28F1C /* PamHeaderView.swift */; };
+		4B0827B31CD4040C00A28F1C /* PamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0827B21CD4040C00A28F1C /* PamCollectionViewCell.swift */; };
 		4B1550C61CBD4CC900878588 /* ResearchNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1550C31CBD4CAD00878588 /* ResearchNet.framework */; };
 		4B1550C71CBD4CC900878588 /* ResearchNet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1550C31CBD4CAD00878588 /* ResearchNet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B88C79C1C7B9F2D003F3397 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B88C79A1C7B9F2D003F3397 /* Interface.storyboard */; };
@@ -159,6 +162,9 @@
 		19A6A1AE4FE2EF8695B4ADAA /* libPods-emaUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-emaUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		245E0A83BBC7CCF7E55F9EC8 /* Pods-emaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-emaUITests/Pods-emaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2DDCD3AC9B7F92BC3E374A67 /* Pods-emaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emaUITests/Pods-emaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B0827AE1CD4016500A28F1C /* PamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamViewController.swift; sourceTree = "<group>"; };
+		4B0827B01CD4031C00A28F1C /* PamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamHeaderView.swift; sourceTree = "<group>"; };
+		4B0827B21CD4040C00A28F1C /* PamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B1550BD1CBD4CAD00878588 /* ResearchNet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchNet.xcodeproj; path = "../ResearchnetSDK-IOS/ResearchNet/ResearchNet.xcodeproj"; sourceTree = "<group>"; };
 		4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		4B88C7981C7B9F2D003F3397 /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,6 +331,9 @@
 			children = (
 				4BADFCA91CC8243100B949D2 /* ActivityViewController.swift */,
 				4BADFCAB1CC8247800B949D2 /* StudyTasks.swift */,
+				4B0827AE1CD4016500A28F1C /* PamViewController.swift */,
+				4B0827B01CD4031C00A28F1C /* PamHeaderView.swift */,
+				4B0827B21CD4040C00A28F1C /* PamCollectionViewCell.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -802,11 +811,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0827B11CD4031C00A28F1C /* PamHeaderView.swift in Sources */,
 				4BADFCB71CC8287C00B949D2 /* MainViewController.swift in Sources */,
 				4BADFCAC1CC8247800B949D2 /* StudyTasks.swift in Sources */,
 				4BADFCB91CC8298800B949D2 /* ResearchContainerSegue.swift in Sources */,
 				4BADFCB51CC8281B00B949D2 /* LoginViewController.swift in Sources */,
 				4BADFCA61CC8239800B949D2 /* WithdrawViewController.swift in Sources */,
+				4B0827B31CD4040C00A28F1C /* PamCollectionViewCell.swift in Sources */,
 				4BADFCAA1CC8243100B949D2 /* ActivityViewController.swift in Sources */,
 				4BB8B3141BC81FCD0056324B /* SurveyViewController.swift in Sources */,
 				4BB8B3121BC81FCD0056324B /* AppDelegate.swift in Sources */,
@@ -816,6 +827,7 @@
 				4BADFCC01CC83CE600B949D2 /* ProfileStaticTableViewCell.swift in Sources */,
 				4BADFCB31CC827C900B949D2 /* OnboardingViewController.swift in Sources */,
 				4BADFCAF1CC825CC00B949D2 /* ConsentDocument.swift in Sources */,
+				4B0827AF1CD4016500A28F1C /* PamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,7 +1058,7 @@
 			baseConfigurationReference = 8A8F002664F389DF76A9F10A /* Pods-ema.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ema/Info.plist;
@@ -1061,7 +1073,7 @@
 			baseConfigurationReference = E874C28F6FB3B3126F43728C /* Pods-ema.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ema/Info.plist;

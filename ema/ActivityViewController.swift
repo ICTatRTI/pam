@@ -10,7 +10,7 @@ import UIKit
 import ResearchKit
 
 enum Activity: Int {
-    case PAMSurvey
+    case PAMSurvey, OtherSurvey
     static var allValues: [Activity] {
         var idx = 0
         return Array(AnyGenerator{ return self.init(rawValue: idx++)})
@@ -20,6 +20,9 @@ enum Activity: Int {
         switch self {
         case .PAMSurvey:
             return "PAM Survey"
+        case .OtherSurvey:
+            return "Other Survey"
+            
         }
     }
     
@@ -27,6 +30,8 @@ enum Activity: Int {
         switch self {
         case .PAMSurvey:
             return "Answer a couple of questions"
+        case .OtherSurvey:
+            return "Answer a few more questions"
         }
     }
 }
@@ -60,10 +65,15 @@ class ActivityViewController: UITableViewController {
         switch activity {
         case .PAMSurvey:
             taskViewController = ORKTaskViewController(task: StudyTasks.surveyTask, taskRunUUID: NSUUID())
+            taskViewController.delegate = self
+        case .OtherSurvey:
+            taskViewController = ORKTaskViewController(task: StudyTasks.surveyTask, taskRunUUID: NSUUID())
+
+            print("on going ")
             
         }
         
-        taskViewController.delegate = self
+        
         navigationController?.presentViewController(taskViewController, animated: true, completion: nil)
     }
 }
