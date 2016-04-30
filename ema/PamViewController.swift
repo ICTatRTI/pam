@@ -13,6 +13,12 @@ class PamViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBAction func completeButtonTapped(sender: UIButton) {
+        //performSegueWithIdentifier("toLogin", sender: self)
+        print("go back to the activities screen")
+        
+    }
+    
     let identifier = "CellIdentifier"
     
     override func viewDidLoad() {

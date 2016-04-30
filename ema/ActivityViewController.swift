@@ -10,7 +10,7 @@ import UIKit
 import ResearchKit
 
 enum Activity: Int {
-    case PAMSurvey, OtherSurvey
+    case PAMSurvey
     static var allValues: [Activity] {
         var idx = 0
         return Array(AnyGenerator{ return self.init(rawValue: idx++)})
@@ -20,8 +20,7 @@ enum Activity: Int {
         switch self {
         case .PAMSurvey:
             return "PAM Survey"
-        case .OtherSurvey:
-            return "Other Survey"
+
             
         }
     }
@@ -30,8 +29,7 @@ enum Activity: Int {
         switch self {
         case .PAMSurvey:
             return "Answer a couple of questions"
-        case .OtherSurvey:
-            return "Answer a few more questions"
+
         }
     }
 }
@@ -61,20 +59,24 @@ class ActivityViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         guard let activity = Activity(rawValue: indexPath.row) else { return }
         
-        let taskViewController: ORKTaskViewController
+        
         switch activity {
         case .PAMSurvey:
-            taskViewController = ORKTaskViewController(task: StudyTasks.surveyTask, taskRunUUID: NSUUID())
-            taskViewController.delegate = self
-        case .OtherSurvey:
-            taskViewController = ORKTaskViewController(task: StudyTasks.surveyTask, taskRunUUID: NSUUID())
-
-            print("on going ")
+            
+            
+            // This is the way to refernece a custom task controller
+          
+            let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("pamStoryboardID") as! PamIntroViewContoller
+              /*
+            self.navigationController?.pushViewController(secondViewController, animated: true)
+            */
+            
+            let navigationController = UINavigationController(rootViewController: secondViewController)
+            
+            self.presentViewController(navigationController, animated: true, completion: nil)
             
         }
-        
-        
-        navigationController?.presentViewController(taskViewController, animated: true, completion: nil)
+ 
     }
 }
 
