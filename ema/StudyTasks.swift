@@ -69,7 +69,11 @@ struct StudyTasks {
         return ORKOrderedTask(identifier: "SurveyTask", steps: steps)
     }()
     
-    
+    static let tappingTask: ORKOrderedTask = {
+        let intendedUseDescription = "Finger tapping is a universal way to communicate."
+        
+        return ORKOrderedTask.twoFingerTappingIntervalTaskWithIdentifier("TappingTask", intendedUseDescription: intendedUseDescription, duration: 10, options: ORKPredefinedTaskOption.None)
+    }()
 
     
 }

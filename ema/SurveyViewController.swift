@@ -65,12 +65,10 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CL
         
     }
     
+    
     func taskViewController(taskViewController: ORKTaskViewController,
                             didFinishWithReason reason: ORKTaskViewControllerFinishReason,
                                                 error: NSError?) {
-        
-        
-      
         
         
         var responsejson: JSON =  [:]

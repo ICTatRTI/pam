@@ -20,6 +20,8 @@ enum Activity: Int {
         switch self {
         case .PAMSurvey:
             return "PAM Survey"
+
+            
         }
     }
     
@@ -27,6 +29,7 @@ enum Activity: Int {
         switch self {
         case .PAMSurvey:
             return "Answer a couple of questions"
+
         }
     }
 }
@@ -56,15 +59,24 @@ class ActivityViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         guard let activity = Activity(rawValue: indexPath.row) else { return }
         
-        let taskViewController: ORKTaskViewController
+        
         switch activity {
         case .PAMSurvey:
-            taskViewController = ORKTaskViewController(task: StudyTasks.surveyTask, taskRunUUID: NSUUID())
+            
+            
+            // This is the way to refernece a custom task controller
+          
+            let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("pamStoryboardID") as! PamIntroViewContoller
+              /*
+            self.navigationController?.pushViewController(secondViewController, animated: true)
+            */
+            
+            let navigationController = UINavigationController(rootViewController: secondViewController)
+            
+            self.presentViewController(navigationController, animated: true, completion: nil)
             
         }
-        
-        taskViewController.delegate = self
-        navigationController?.presentViewController(taskViewController, animated: true, completion: nil)
+ 
     }
 }
 
