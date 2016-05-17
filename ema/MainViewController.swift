@@ -9,12 +9,25 @@
 import UIKit
 import ResearchKit
 import ResearchNet
+import CoreLocation
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, CLLocationManagerDelegate {
+    
+    var locationManager: CLLocationManager!
+    var locationFixAchieved : Bool = false
+    var txtLatitude: Double = 0.0
+    var txtLongitude: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Try to get users location
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationFixAchieved = false
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+
         // automatically log 'em in if they have a passcode
         if ORKPasscodeViewController.isPasscodeStoredInKeychain() {
             print("on to the study")
@@ -26,6 +39,23 @@ class MainViewController: UIViewController {
         }
     }
     
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if (locationFixAchieved == false) {
+            locationFixAchieved = true
+            let locationArray = locations as NSArray
+            let locationObj = locationArray.lastObject as! CLLocation
+            let coord = locationObj.coordinate
+            
+            txtLatitude = coord.latitude
+            txtLongitude = coord.longitude
+            
+            // Put these in a session variable to be accessed by another viewcontroller (still have to understand this better)
+            print("lat: ", txtLatitude)
+            print("long: ", txtLongitude)
+        }
+        
+    }
     // MARK: Unwind segues
     
     @IBAction func unwindToStudy(segue: UIStoryboardSegue) {
