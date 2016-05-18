@@ -33,10 +33,7 @@
 		4BADFCBC1CC83C7600B949D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCBB1CC83C7600B949D2 /* ProfileViewController.swift */; };
 		4BADFCBE1CC83CBB00B949D2 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCBD1CC83CBB00B949D2 /* ProfileHeaderView.swift */; };
 		4BADFCC01CC83CE600B949D2 /* ProfileStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCBF1CC83CE600B949D2 /* ProfileStaticTableViewCell.swift */; };
-		4BB156DE1C7E5183002A1EAA /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5183D31C7E50B900A9379D /* ResearchKit.framework */; };
-		4BB156DF1C7E5183002A1EAA /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5183D31C7E50B900A9379D /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BB8B3121BC81FCD0056324B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3111BC81FCD0056324B /* AppDelegate.swift */; };
-		4BB8B3141BC81FCD0056324B /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3131BC81FCD0056324B /* SurveyViewController.swift */; };
 		4BB8B3171BC81FCD0056324B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB8B3151BC81FCD0056324B /* Main.storyboard */; };
 		4BB8B31A1BC81FCD0056324B /* ema.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3181BC81FCD0056324B /* ema.xcdatamodeld */; };
 		4BB8B31C1BC81FCD0056324B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB8B31B1BC81FCD0056324B /* Assets.xcassets */; };
@@ -46,20 +43,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4B5183D21C7E50B900A9379D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B183A5951A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
-		4B5183D41C7E50B900A9379D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
-			remoteInfo = ResearchKitTests;
-		};
 		4B88C7A61C7B9F2E003F3397 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4BB8B3061BC81FCD0056324B /* Project object */;
@@ -73,13 +56,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4B88C7971C7B9F2D003F3397;
 			remoteInfo = watch;
-		};
-		4BB156E01C7E5183002A1EAA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = ResearchKit;
 		};
 		4BB8B3261BC81FCD0056324B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -126,7 +102,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4BB156DF1C7E5183002A1EAA /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +118,6 @@
 		4B0827B01CD4031C00A28F1C /* PamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamHeaderView.swift; sourceTree = "<group>"; };
 		4B0827B21CD4040C00A28F1C /* PamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B0827BE1CD420A300A28F1C /* PamIntroViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamIntroViewContoller.swift; sourceTree = "<group>"; };
-		4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		4B88C7981C7B9F2D003F3397 /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B88C79B1C7B9F2D003F3397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		4B88C79D1C7B9F2D003F3397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,7 +142,6 @@
 		4BADFCBF1CC83CE600B949D2 /* ProfileStaticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileStaticTableViewCell.swift; sourceTree = "<group>"; };
 		4BB8B30E1BC81FCD0056324B /* Pam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB8B3111BC81FCD0056324B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BB8B3131BC81FCD0056324B /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		4BB8B3161BC81FCD0056324B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BB8B3191BC81FCD0056324B /* ema.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ema.xcdatamodel; sourceTree = "<group>"; };
 		4BB8B31B1BC81FCD0056324B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -198,7 +171,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BB156DE1C7E5183002A1EAA /* ResearchKit.framework in Frameworks */,
 				0013745ECD3321CB4CC30815 /* Pods_ema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,15 +205,6 @@
 				245E0A83BBC7CCF7E55F9EC8 /* Pods-emaUITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		4B5183CD1C7E50B800A9379D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4B5183D31C7E50B900A9379D /* ResearchKit.framework */,
-				4B5183D51C7E50B900A9379D /* ResearchKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4B88C7991C7B9F2D003F3397 /* watch */ = {
@@ -326,7 +289,6 @@
 		4BB8B3051BC81FCD0056324B = {
 			isa = PBXGroup;
 			children = (
-				4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */,
 				4BB8B3101BC81FCD0056324B /* ema */,
 				4BB8B3281BC81FCD0056324B /* emaTests */,
 				4BB8B3331BC81FCD0056324B /* emaUITests */,
@@ -359,7 +321,6 @@
 				4BADFCB11CC8272200B949D2 /* Onboarding */,
 				4BADFCA11CC8235A00B949D2 /* Withdrawl */,
 				4BB8B3111BC81FCD0056324B /* AppDelegate.swift */,
-				4BB8B3131BC81FCD0056324B /* SurveyViewController.swift */,
 				4BB8B3151BC81FCD0056324B /* Main.storyboard */,
 				4BB8B31B1BC81FCD0056324B /* Assets.xcassets */,
 				4BB8B31D1BC81FCD0056324B /* LaunchScreen.storyboard */,
@@ -453,7 +414,6 @@
 			);
 			dependencies = (
 				4B88C7B51C7B9F2E003F3397 /* PBXTargetDependency */,
-				4BB156E11C7E5183002A1EAA /* PBXTargetDependency */,
 			);
 			name = ema;
 			productName = ema;
@@ -548,12 +508,6 @@
 			mainGroup = 4BB8B3051BC81FCD0056324B;
 			productRefGroup = 4BB8B30F1BC81FCD0056324B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4B5183CD1C7E50B800A9379D /* Products */;
-					ProjectRef = 4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4BB8B30D1BC81FCD0056324B /* ema */,
@@ -564,23 +518,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4B5183D31C7E50B900A9379D /* ResearchKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ResearchKit.framework;
-			remoteRef = 4B5183D21C7E50B900A9379D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4B5183D51C7E50B900A9379D /* ResearchKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ResearchKitTests.xctest;
-			remoteRef = 4B5183D41C7E50B900A9379D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4B88C7961C7B9F2D003F3397 /* Resources */ = {
@@ -772,7 +709,6 @@
 				4BADFCA61CC8239800B949D2 /* WithdrawViewController.swift in Sources */,
 				4B0827B31CD4040C00A28F1C /* PamCollectionViewCell.swift in Sources */,
 				4BADFCAA1CC8243100B949D2 /* ActivityViewController.swift in Sources */,
-				4BB8B3141BC81FCD0056324B /* SurveyViewController.swift in Sources */,
 				4BB8B3121BC81FCD0056324B /* AppDelegate.swift in Sources */,
 				4BB8B31A1BC81FCD0056324B /* ema.xcdatamodeld in Sources */,
 				4BADFCBC1CC83C7600B949D2 /* ProfileViewController.swift in Sources */,
@@ -813,11 +749,6 @@
 			isa = PBXTargetDependency;
 			target = 4B88C7971C7B9F2D003F3397 /* watch */;
 			targetProxy = 4B88C7B41C7B9F2E003F3397 /* PBXContainerItemProxy */;
-		};
-		4BB156E11C7E5183002A1EAA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResearchKit;
-			targetProxy = 4BB156E01C7E5183002A1EAA /* PBXContainerItemProxy */;
 		};
 		4BB8B3271BC81FCD0056324B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1010,7 +941,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ema/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1028,7 +958,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ema/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

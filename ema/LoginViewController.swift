@@ -8,10 +8,9 @@
 
 import UIKit
 import ResearchKit
+import ResearchNet
 
 class LoginViewController: UIViewController {
-    
-    func adam() {}
     
     
     /// This tasks presents the login step.
@@ -34,7 +33,7 @@ class LoginViewController: UIViewController {
                 
                 passwordPrompt.addAction(UIAlertAction(title: "Send", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
                     let tf = passwordPrompt.textFields![0] as UITextField
-                    print("do stuff..like send an email with a new password " + tf.text! )
+                    
                 }))
 
                 self.presentViewController(passwordPrompt, animated: true, completion: nil)

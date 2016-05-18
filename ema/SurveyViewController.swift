@@ -9,8 +9,7 @@
 
 import UIKit
 import ResearchKit
-import Alamofire
-import SwiftyJSON
+import ResearchNet
 import CoreLocation
 
 
@@ -71,68 +70,7 @@ class SurveyViewController: UIViewController,  ORKTaskViewControllerDelegate, CL
                                                 error: NSError?) {
         
         
-        var responsejson: JSON =  [:]
-        responsejson["device_id"].stringValue = UIDevice.currentDevice().identifierForVendor!.UUIDString
-        responsejson["lat"].stringValue = String(txtLatitude)
-        responsejson["long"].stringValue = String(txtLongitude)
-        
-        let taskResult = taskViewController.result // this should be a ORKTaskResult
-        let results = taskResult.results as! [ORKStepResult]//[ORKStepResult]
-        
-        var responses: [String:String] = [:]
-        
-        
-        for thisStepResult in results { // [ORKStepResults]
-            
-            let stepResults = thisStepResult.results as! [ORKQuestionResult]
-            
-            /*
-             Go through the supported answer formats.  This is made easier with AppCore but we're not using this for now just because a) its in objective C and kind of hard to use and 2) its going away at some point to be replaced with enhancements to the ResearchKit framework
-             
-             */
-            if let scaleresult = stepResults.first as? ORKScaleQuestionResult
-            {
-                if scaleresult.scaleAnswer != nil
-                {
-                    responses[scaleresult.identifier] = (scaleresult.scaleAnswer?.stringValue)!
-                }
-            }
-            
-            if let choiceresult = stepResults.first as? ORKChoiceQuestionResult
-            {
-                if choiceresult.choiceAnswers != nil
-                {
-                    let selected = choiceresult.choiceAnswers!
-                    responses[choiceresult.identifier] = "\(selected.first!)"
-                }
-            }
-            
-            responsejson["response"].dictionaryObject = responses
-            
-        }
-        
-        
-        let headers = [
-            "Authorization": "Token b8fba8a491c4b783b7e0bb9342e6e8b27f2b0cd1"
-        ]
-        
-        debugPrint(responsejson)
-        
-        
-        Alamofire.request(.POST, "https://researchnet.ictedge.org/submission/", headers: headers, parameters: responsejson.dictionaryObject ,encoding: .JSON).responseJSON { response in
-            
-            debugPrint(response)     // prints detailed description of all response properties
-            
-            print(response.request)  // original URL request
-            print(response.response) // URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
-            
-        }
+      
         
         /*
          The `reason` passed to this method indicates why the task view

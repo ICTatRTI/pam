@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="r2x-bO-KcB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="r2x-bO-KcB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -21,7 +21,6 @@
                     <connections>
                         <segue destination="fw8-SK-Neh" kind="custom" identifier="toOnboarding" customClass="ResearchContainerSegue" customModule="Pam" customModuleProvider="target" id="JtD-fe-VyH"/>
                         <segue destination="5IB-I0-JrF" kind="custom" identifier="toStudy" customClass="ResearchContainerSegue" customModule="Pam" customModuleProvider="target" id="65g-XE-BfE"/>
-                        <segue destination="hX4-LN-0Yb" kind="custom" identifier="toForgotPassword" customClass="ResearchContainerSegue" id="D4X-1u-oOZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hQ-30-LWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,7 +282,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="koY-ty-JSX" customClass="ProfileStaticTableViewCell" customModule="Pam" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileReuseIdentifier" id="koY-ty-JSX" customClass="ProfileStaticTableViewCell" customModule="Pam" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="334" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="koY-ty-JSX" id="eTg-bg-Oet">
@@ -299,66 +298,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Profile" id="QNg-q6-lGC"/>
                     <connections>
-                        <segue destination="iBl-JC-z5h" kind="unwind" unwindAction="unwindToWithdrawl:" id="gch-5b-Ogs"/>
+                        <segue destination="iBl-JC-z5h" kind="unwind" identifier="unwindToWithdrawl" unwindAction="unwindToWithdrawl:" id="gch-5b-Ogs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7QL-i2-sBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iBl-JC-z5h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1103.4666666666667" y="3607.7466666666664"/>
-        </scene>
-        <!--Forgot Password View Controller-->
-        <scene sceneID="7LL-qT-Tvg">
-            <objects>
-                <viewController id="hX4-LN-0Yb" customClass="ForgotPasswordViewController" customModule="Pam" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9l7-sM-Kpz"/>
-                        <viewControllerLayoutGuide type="bottom" id="iT9-GM-49V"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eQT-mU-1Un">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvZ-5Z-81H">
-                                <rect key="frame" x="90" y="336" width="36" height="30"/>
-                                <state key="normal" title="Send"/>
-                                <connections>
-                                    <action selector="forgotPassword" destination="hX4-LN-0Yb" eventType="touchUpInside" id="amX-Qt-u4g"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pamela@rti.org" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ciS-H5-zpd">
-                                <rect key="frame" x="175" y="269" width="274" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="274" id="NUJ-PL-ioD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp1-YI-KiM">
-                                <rect key="frame" x="207" y="126" width="210" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Obh-Xl-run"/>
-                                    <constraint firstAttribute="width" constant="210" id="PT1-5a-vlN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ciS-H5-zpd" firstAttribute="top" secondItem="lp1-YI-KiM" secondAttribute="bottom" constant="108" id="FoE-ow-QkI"/>
-                            <constraint firstItem="lp1-YI-KiM" firstAttribute="centerX" secondItem="ciS-H5-zpd" secondAttribute="centerX" id="Nnx-WW-J9c"/>
-                            <constraint firstItem="kvZ-5Z-81H" firstAttribute="top" secondItem="ciS-H5-zpd" secondAttribute="bottom" constant="37" id="OZG-FW-lQG"/>
-                            <constraint firstAttribute="trailing" secondItem="kvZ-5Z-81H" secondAttribute="trailing" constant="194" id="TiG-aD-u2a"/>
-                            <constraint firstItem="ciS-H5-zpd" firstAttribute="centerY" secondItem="eQT-mU-1Un" secondAttribute="centerY" id="cER-EV-cGa"/>
-                            <constraint firstItem="ciS-H5-zpd" firstAttribute="leading" secondItem="eQT-mU-1Un" secondAttribute="leading" constant="175" id="dTj-kT-No2"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sod-7z-Zbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1203.7333333333333" y="1800.5599999999999"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="KjJ-Qg-kzw">

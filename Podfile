@@ -2,14 +2,13 @@
 # platform :ios, '6.0'
 
 target 'ema' do
-    pod 'Alamofire', '~> 3.1.5'
-    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-    pod 'ResearchNet', :git => 'https://bitbucket.org/rcdrti/researchnetsdk-ios.git'
+	pod 'ResearchKit', '~> 1.3.0'
+	pod 'ResearchNet', :git => 'https://bitbucket.org/rcdrti/researchnetsdk-ios.git'
 end
 
 target 'emaTests' do
-    pod 'Alamofire', '~> 3.1.5'
-    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+	pod 'ResearchKit', '~> 1.3.0'
+	pod 'ResearchNet', :git => 'https://bitbucket.org/rcdrti/researchnetsdk-ios.git'
 
 end
 
