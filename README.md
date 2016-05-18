@@ -2,7 +2,7 @@
 
 This is an IOS app using the ResearchKit framework for the Ecological Momentary Assessment using the Photographic Affect Meter (PAM).  For more information on PAM please check out [this site](http://idl.cornell.edu/projects/pam/).
 
-The ResearchNet IOS framework can be found [here](https://bitbucket.org/rcdrti/researchnetsdk-ios). Some day you will be able to use a dependency manager like Cocopods to bring this in, but until then you'll have to manually like this by dragging the xcodeprj file (from the Finder) into your project then adding this as an embedded binary under the apps General settings.
+This application uses the ResearchNet IOS framework, which can be found [here](https://bitbucket.org/rcdrti/researchnetsdk-ios). 
 
 ### Push Notifications
 Everybody knows that using notifications are a great way to promote user engagement and I mean EVERYBODY. It is for this reason that we have included a sample push notification script handcrafted in PHP.  Here is how to use it:
