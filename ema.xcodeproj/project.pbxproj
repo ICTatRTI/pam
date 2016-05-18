@@ -14,8 +14,6 @@
 		4B0827B11CD4031C00A28F1C /* PamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0827B01CD4031C00A28F1C /* PamHeaderView.swift */; };
 		4B0827B31CD4040C00A28F1C /* PamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0827B21CD4040C00A28F1C /* PamCollectionViewCell.swift */; };
 		4B0827BF1CD420A300A28F1C /* PamIntroViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0827BE1CD420A300A28F1C /* PamIntroViewContoller.swift */; };
-		4B1550C61CBD4CC900878588 /* ResearchNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1550C31CBD4CAD00878588 /* ResearchNet.framework */; };
-		4B1550C71CBD4CC900878588 /* ResearchNet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1550C31CBD4CAD00878588 /* ResearchNet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B88C79C1C7B9F2D003F3397 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B88C79A1C7B9F2D003F3397 /* Interface.storyboard */; };
 		4B88C79E1C7B9F2D003F3397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B88C79D1C7B9F2D003F3397 /* Assets.xcassets */; };
 		4B88C7A51C7B9F2E003F3397 /* watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B88C7A41C7B9F2E003F3397 /* watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -48,27 +46,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4B1550C21CBD4CAD00878588 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4B1550BD1CBD4CAD00878588 /* ResearchNet.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4B1550971CBD491400878588;
-			remoteInfo = ResearchNet;
-		};
-		4B1550C41CBD4CAD00878588 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4B1550BD1CBD4CAD00878588 /* ResearchNet.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4B1550A11CBD491400878588;
-			remoteInfo = ResearchNetTests;
-		};
-		4B1550C81CBD4CC900878588 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4B1550BD1CBD4CAD00878588 /* ResearchNet.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4B1550961CBD491400878588;
-			remoteInfo = ResearchNet;
-		};
 		4B5183D21C7E50B900A9379D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */;
@@ -150,7 +127,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				4BB156DF1C7E5183002A1EAA /* ResearchKit.framework in Embed Frameworks */,
-				4B1550C71CBD4CC900878588 /* ResearchNet.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,7 +143,6 @@
 		4B0827B01CD4031C00A28F1C /* PamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamHeaderView.swift; sourceTree = "<group>"; };
 		4B0827B21CD4040C00A28F1C /* PamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B0827BE1CD420A300A28F1C /* PamIntroViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamIntroViewContoller.swift; sourceTree = "<group>"; };
-		4B1550BD1CBD4CAD00878588 /* ResearchNet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchNet.xcodeproj; path = "../ResearchnetSDK-IOS/ResearchNet/ResearchNet.xcodeproj"; sourceTree = "<group>"; };
 		4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		4B88C7981C7B9F2D003F3397 /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B88C79B1C7B9F2D003F3397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -224,7 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BB156DE1C7E5183002A1EAA /* ResearchKit.framework in Frameworks */,
-				4B1550C61CBD4CC900878588 /* ResearchNet.framework in Frameworks */,
 				0013745ECD3321CB4CC30815 /* Pods_ema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,15 +233,6 @@
 				245E0A83BBC7CCF7E55F9EC8 /* Pods-emaUITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		4B1550BE1CBD4CAD00878588 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4B1550C31CBD4CAD00878588 /* ResearchNet.framework */,
-				4B1550C51CBD4CAD00878588 /* ResearchNetTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4B5183CD1C7E50B800A9379D /* Products */ = {
@@ -361,7 +326,6 @@
 		4BB8B3051BC81FCD0056324B = {
 			isa = PBXGroup;
 			children = (
-				4B1550BD1CBD4CAD00878588 /* ResearchNet.xcodeproj */,
 				4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */,
 				4BB8B3101BC81FCD0056324B /* ema */,
 				4BB8B3281BC81FCD0056324B /* emaTests */,
@@ -490,7 +454,6 @@
 			dependencies = (
 				4B88C7B51C7B9F2E003F3397 /* PBXTargetDependency */,
 				4BB156E11C7E5183002A1EAA /* PBXTargetDependency */,
-				4B1550C91CBD4CC900878588 /* PBXTargetDependency */,
 			);
 			name = ema;
 			productName = ema;
@@ -590,10 +553,6 @@
 					ProductGroup = 4B5183CD1C7E50B800A9379D /* Products */;
 					ProjectRef = 4B5183CC1C7E50B800A9379D /* ResearchKit.xcodeproj */;
 				},
-				{
-					ProductGroup = 4B1550BE1CBD4CAD00878588 /* Products */;
-					ProjectRef = 4B1550BD1CBD4CAD00878588 /* ResearchNet.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -607,20 +566,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		4B1550C31CBD4CAD00878588 /* ResearchNet.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ResearchNet.framework;
-			remoteRef = 4B1550C21CBD4CAD00878588 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4B1550C51CBD4CAD00878588 /* ResearchNetTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ResearchNetTests.xctest;
-			remoteRef = 4B1550C41CBD4CAD00878588 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		4B5183D31C7E50B900A9379D /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -859,11 +804,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4B1550C91CBD4CC900878588 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResearchNet;
-			targetProxy = 4B1550C81CBD4CC900878588 /* PBXContainerItemProxy */;
-		};
 		4B88C7A71C7B9F2E003F3397 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4B88C7A31C7B9F2E003F3397 /* watch Extension */;

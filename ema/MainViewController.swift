@@ -28,6 +28,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
 
+        let r : ResearchNet = ResearchNet(host: "researchnet.ictedge.org")
+        r.printConfiguration()
+        
+        //let rn : ResearchNet = ResearchNet( host: "researchnet.ictedge.org")
+        //rn.printConfiguration()
+        
         // automatically log 'em in if they have a passcode
         if ORKPasscodeViewController.isPasscodeStoredInKeychain() {
             print("on to the study")
