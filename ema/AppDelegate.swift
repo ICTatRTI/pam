@@ -1,107 +1,137 @@
 //
 //  AppDelegate.swift
-//  ema
+//  workaday
 //
-//  Created by Adam Preston on 10/9/15.
-//  Copyright © 2015 RTI. All rights reserved.
+//  Created by Adam Preston on 4/6/16.
+//  Copyright © 2016 RTI. All rights reserved.
 //
 
 import UIKit
 import CoreData
+import ResearchNet
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-    func registerForPushNotifications(application: UIApplication) {
-        let notificationSettings = UIUserNotificationSettings(
-            forTypes: [.Badge, .Sound, .Alert], categories: nil)
-        application.registerUserNotificationSettings(notificationSettings)
-    }
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-       
-        // Register for push notifications
-        registerForPushNotifications(application)
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        // register notification (this will allow the user to grant notifications for this app
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil))
+        
+        // Configure daily notifications
+        let notiftypes:UIUserNotificationType = [.alert, .badge, .sound]
+        
+        let notifSettings:UIUserNotificationSettings = UIUserNotificationSettings(types: notiftypes, categories: nil)
+        
+        UIApplication.shared.registerUserNotificationSettings(notifSettings)
+        
+        //Avoid duplicate notificaions
+        application.cancelAllLocalNotifications();
+        
+        // Configure notifications for each day (sunday is 1)
+        scheduleLocalNotification(17,minute: 0, weekDay: 1)
+        scheduleLocalNotification(9,minute: 0, weekDay: 2)
+        scheduleLocalNotification(9,minute: 0, weekDay: 3)
+        scheduleLocalNotification(9,minute: 0, weekDay: 4)
+        scheduleLocalNotification(9,minute: 0, weekDay: 5)
+        scheduleLocalNotification(9,minute: 0, weekDay: 6)
+        scheduleLocalNotification(17,minute: 0, weekDay: 7)
+        
+        // Default the dates that the surveys were completed. Default to sometime in the past, why not 1970
+        
+        let newYears1970 = Date(timeIntervalSince1970: 0)
+        
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "weekday_timestamp") == nil {
+            defaults.set(newYears1970, forKey: "weekday_timestamp")
+        }
+        
+        if defaults.object(forKey: "weekend_timestamp") == nil {
+            defaults.set(newYears1970, forKey: "weekend_timestamp")
+        }
         
         return true
     }
     
-    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
-        if notificationSettings.types != .None {
-            application.registerForRemoteNotifications()
-        }
-    }
     
-    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        let tokenChars = UnsafePointer<CChar>(deviceToken.bytes)
-        var tokenString = ""
+    func scheduleLocalNotification(_ hour:Int, minute:Int, weekDay:Int){
         
-        for i in 0..<deviceToken.length {
-            tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
-        }
+        var calendar =  Calendar(identifier: Calendar.Identifier.gregorian)
+        calendar.timeZone = TimeZone.current
         
-        print("Device Token:", tokenString)
+        var components = DateComponents()
+        components.weekday = weekDay
+        
+        let date = Date()
+        let notificationDate = (calendar as NSCalendar).date(byAdding: components, to: date, options: [])
+        let adjustedDate: Date = (calendar as NSCalendar).date(bySettingHour: hour, minute: minute, second: 0, of: notificationDate!, options: NSCalendar.Options())!
+        
+        let localNotificaion = UILocalNotification()
+        localNotificaion.fireDate = adjustedDate
+        localNotificaion.alertBody = "Please complete your WorkDay study activities today.  Thanks again for participating."
+        localNotificaion.timeZone = TimeZone.current
+        
+        localNotificaion.repeatInterval = .weekOfYear
+        UIApplication.shared.scheduleLocalNotification(localNotificaion)
+        
     }
     
-    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        print("Failed to register:", error)
-    }
     
-
-    func applicationWillResignActive(application: UIApplication) {
+    
+    func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
-
-    func applicationDidEnterBackground(application: UIApplication) {
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
-
-    func applicationWillEnterForeground(application: UIApplication) {
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
-
-    func applicationDidBecomeActive(application: UIApplication) {
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-
-    func applicationWillTerminate(application: UIApplication) {
+    
+    func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-
+    
     // MARK: - Core Data stack
-
-    lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "org.rti.ema" in the application's documents Application Support directory.
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+    
+    lazy var applicationDocumentsDirectory: URL = {
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "org.rti.workaday" in the application's documents Application Support directory.
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return urls[urls.count-1]
     }()
-
+    
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("ema", withExtension: "momd")!
-        return NSManagedObjectModel(contentsOfURL: modelURL)!
+        let modelURL = Bundle.main.url(forResource: "workaday", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOf: modelURL)!
     }()
-
+    
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
+        let url = self.applicationDocumentsDirectory.appendingPathComponent("SingleViewCoreData.sqlite")
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
         } catch {
             // Report any error we got.
             var dict = [String: AnyObject]()
-            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
-            dict[NSLocalizedFailureReasonErrorKey] = failureReason
-
+            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data" as AnyObject?
+            dict[NSLocalizedFailureReasonErrorKey] = failureReason as AnyObject?
+            
             dict[NSUnderlyingErrorKey] = error as NSError
             let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
             // Replace this with code to handle the error appropriately.
@@ -112,17 +142,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return coordinator
     }()
-
+    
     lazy var managedObjectContext: NSManagedObjectContext = {
         // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
         let coordinator = self.persistentStoreCoordinator
-        var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
     }()
-
+    
     // MARK: - Core Data Saving support
-
+    
     func saveContext () {
         if managedObjectContext.hasChanges {
             do {
@@ -136,6 +166,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
 }
 

@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0013745ECD3321CB4CC30815 /* Pods_ema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12825806D205C7C7DC9B7F21 /* Pods_ema.framework */; };
-		1F62761EC86FF7DE1CB7F181 /* libPods-emaUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A6A1AE4FE2EF8695B4ADAA /* libPods-emaUITests.a */; };
-		2A415ABAD6D5908A4CE7DF01 /* Pods_emaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9948FF11EE126EDD23BC8134 /* Pods_emaTests.framework */; };
 		4B0827AF1CD4016500A28F1C /* PamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0827AE1CD4016500A28F1C /* PamViewController.swift */; };
 		4B0827B11CD4031C00A28F1C /* PamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0827B01CD4031C00A28F1C /* PamHeaderView.swift */; };
 		4B0827B31CD4040C00A28F1C /* PamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0827B21CD4040C00A28F1C /* PamCollectionViewCell.swift */; };
 		4B0827BF1CD420A300A28F1C /* PamIntroViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0827BE1CD420A300A28F1C /* PamIntroViewContoller.swift */; };
+		4B6E6D661E0DD66000190F0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E6D651E0DD66000190F0F /* Constants.swift */; };
+		4B6E6D681E0DDA7B00190F0F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E6D671E0DDA7B00190F0F /* Extensions.swift */; };
+		4B6E6D6A1E0DDB1A00190F0F /* WeekendIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E6D691E0DDB1A00190F0F /* WeekendIntroViewController.swift */; };
+		4B6E6D6D1E0DDC5F00190F0F /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E6D6C1E0DDC5F00190F0F /* SurveyViewController.swift */; };
+		4B6E6D6F1E0DDCBC00190F0F /* WeekdayIntroViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E6D6E1E0DDCBC00190F0F /* WeekdayIntroViewContoller.swift */; };
 		4B88C79C1C7B9F2D003F3397 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B88C79A1C7B9F2D003F3397 /* Interface.storyboard */; };
 		4B88C79E1C7B9F2D003F3397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B88C79D1C7B9F2D003F3397 /* Assets.xcassets */; };
 		4B88C7A51C7B9F2E003F3397 /* watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B88C7A41C7B9F2E003F3397 /* watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -28,7 +30,7 @@
 		4BADFCAF1CC825CC00B949D2 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCAE1CC825CC00B949D2 /* ConsentDocument.swift */; };
 		4BADFCB31CC827C900B949D2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB21CC827C900B949D2 /* OnboardingViewController.swift */; };
 		4BADFCB51CC8281B00B949D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB41CC8281B00B949D2 /* LoginViewController.swift */; };
-		4BADFCB71CC8287C00B949D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB61CC8287C00B949D2 /* MainViewController.swift */; };
+		4BADFCB71CC8287C00B949D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB61CC8287C00B949D2 /* ViewController.swift */; };
 		4BADFCB91CC8298800B949D2 /* ResearchContainerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCB81CC8298800B949D2 /* ResearchContainerSegue.swift */; };
 		4BADFCBC1CC83C7600B949D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCBB1CC83C7600B949D2 /* ProfileViewController.swift */; };
 		4BADFCBE1CC83CBB00B949D2 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADFCBD1CC83CBB00B949D2 /* ProfileHeaderView.swift */; };
@@ -40,6 +42,8 @@
 		4BB8B31F1BC81FCD0056324B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB8B31D1BC81FCD0056324B /* LaunchScreen.storyboard */; };
 		4BB8B32A1BC81FCD0056324B /* emaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3291BC81FCD0056324B /* emaTests.swift */; };
 		4BB8B3351BC81FCD0056324B /* emaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3341BC81FCD0056324B /* emaUITests.swift */; };
+		750ECA936C67394CD628A9C7 /* Pods_emaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486F17A8982D89CD597F65A0 /* Pods_emaTests.framework */; };
+		C091BD2A42EBA3FC4E9E4726 /* Pods_ema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3F57F15BA21E936A08D031 /* Pods_ema.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,15 +113,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F59CA4C2F7F798005DF8E5C /* Pods-emaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-emaTests/Pods-emaTests.release.xcconfig"; sourceTree = "<group>"; };
-		12825806D205C7C7DC9B7F21 /* Pods_ema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		19A6A1AE4FE2EF8695B4ADAA /* libPods-emaUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-emaUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		245E0A83BBC7CCF7E55F9EC8 /* Pods-emaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-emaUITests/Pods-emaUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2DDCD3AC9B7F92BC3E374A67 /* Pods-emaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emaUITests/Pods-emaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1E3F57F15BA21E936A08D031 /* Pods_ema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		486F17A8982D89CD597F65A0 /* Pods_emaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0827AE1CD4016500A28F1C /* PamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamViewController.swift; sourceTree = "<group>"; };
 		4B0827B01CD4031C00A28F1C /* PamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamHeaderView.swift; sourceTree = "<group>"; };
 		4B0827B21CD4040C00A28F1C /* PamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B0827BE1CD420A300A28F1C /* PamIntroViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PamIntroViewContoller.swift; sourceTree = "<group>"; };
+		4B6E6D651E0DD66000190F0F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4B6E6D671E0DDA7B00190F0F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4B6E6D691E0DDB1A00190F0F /* WeekendIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekendIntroViewController.swift; sourceTree = "<group>"; };
+		4B6E6D6C1E0DDC5F00190F0F /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		4B6E6D6E1E0DDCBC00190F0F /* WeekdayIntroViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdayIntroViewContoller.swift; sourceTree = "<group>"; };
 		4B88C7981C7B9F2D003F3397 /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B88C79B1C7B9F2D003F3397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		4B88C79D1C7B9F2D003F3397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,7 +141,7 @@
 		4BADFCAE1CC825CC00B949D2 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		4BADFCB21CC827C900B949D2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		4BADFCB41CC8281B00B949D2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		4BADFCB61CC8287C00B949D2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4BADFCB61CC8287C00B949D2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BADFCB81CC8298800B949D2 /* ResearchContainerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResearchContainerSegue.swift; sourceTree = "<group>"; };
 		4BADFCBB1CC83C7600B949D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4BADFCBD1CC83CBB00B949D2 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -153,10 +159,10 @@
 		4BB8B3301BC81FCD0056324B /* emaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB8B3341BC81FCD0056324B /* emaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emaUITests.swift; sourceTree = "<group>"; };
 		4BB8B3361BC81FCD0056324B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A8F002664F389DF76A9F10A /* Pods-ema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ema.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ema/Pods-ema.debug.xcconfig"; sourceTree = "<group>"; };
-		8DD4414F9975408D1E305F2E /* Pods-emaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emaTests/Pods-emaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9948FF11EE126EDD23BC8134 /* Pods_emaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E874C28F6FB3B3126F43728C /* Pods-ema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ema.release.xcconfig"; path = "Pods/Target Support Files/Pods-ema/Pods-ema.release.xcconfig"; sourceTree = "<group>"; };
+		4FAD9869122A50098C6A638A /* Pods-ema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ema.release.xcconfig"; path = "Pods/Target Support Files/Pods-ema/Pods-ema.release.xcconfig"; sourceTree = "<group>"; };
+		5291CAD881994397BB76D6D6 /* Pods-emaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emaTests/Pods-emaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		729A669ADC560FCEC224B71A /* Pods-emaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-emaTests/Pods-emaTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F1CB626265337935E9D449A /* Pods-ema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ema.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ema/Pods-ema.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0013745ECD3321CB4CC30815 /* Pods_ema.framework in Frameworks */,
+				C091BD2A42EBA3FC4E9E4726 /* Pods_ema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A415ABAD6D5908A4CE7DF01 /* Pods_emaTests.framework in Frameworks */,
+				750ECA936C67394CD628A9C7 /* Pods_emaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,24 +193,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F62761EC86FF7DE1CB7F181 /* libPods-emaUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADB147B41AA7CD2E2F86529 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18D18E413FA4453C9BC53F7C /* Pods */ = {
+		20D2ECB310CEE28B9003E059 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8A8F002664F389DF76A9F10A /* Pods-ema.debug.xcconfig */,
-				E874C28F6FB3B3126F43728C /* Pods-ema.release.xcconfig */,
-				8DD4414F9975408D1E305F2E /* Pods-emaTests.debug.xcconfig */,
-				0F59CA4C2F7F798005DF8E5C /* Pods-emaTests.release.xcconfig */,
-				2DDCD3AC9B7F92BC3E374A67 /* Pods-emaUITests.debug.xcconfig */,
-				245E0A83BBC7CCF7E55F9EC8 /* Pods-emaUITests.release.xcconfig */,
+				1E3F57F15BA21E936A08D031 /* Pods_ema.framework */,
+				486F17A8982D89CD597F65A0 /* Pods_emaTests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B6E6D6B1E0DDB4D00190F0F /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				4B6E6D6C1E0DDC5F00190F0F /* SurveyViewController.swift */,
+			);
+			name = Survey;
 			sourceTree = "<group>";
 		};
 		4B88C7991C7B9F2D003F3397 /* watch */ = {
@@ -265,6 +281,8 @@
 				4B0827B01CD4031C00A28F1C /* PamHeaderView.swift */,
 				4B0827B21CD4040C00A28F1C /* PamCollectionViewCell.swift */,
 				4B0827BE1CD420A300A28F1C /* PamIntroViewContoller.swift */,
+				4B6E6D691E0DDB1A00190F0F /* WeekendIntroViewController.swift */,
+				4B6E6D6E1E0DDCBC00190F0F /* WeekdayIntroViewContoller.swift */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -295,8 +313,8 @@
 				4B88C7991C7B9F2D003F3397 /* watch */,
 				4B88C7A81C7B9F2E003F3397 /* watch Extension */,
 				4BB8B30F1BC81FCD0056324B /* Products */,
-				18D18E413FA4453C9BC53F7C /* Pods */,
-				F1BC1C42855E5E89060A1815 /* Frameworks */,
+				EF381D33D36BCBD380EA9A7E /* Pods */,
+				20D2ECB310CEE28B9003E059 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,6 +333,7 @@
 		4BB8B3101BC81FCD0056324B /* ema */ = {
 			isa = PBXGroup;
 			children = (
+				4B6E6D6B1E0DDB4D00190F0F /* Survey */,
 				4BADFCA81CC823D700B949D2 /* Activities */,
 				4BADFCAD1CC824D500B949D2 /* Consent */,
 				4BADFCA71CC823B700B949D2 /* Profile */,
@@ -326,8 +345,10 @@
 				4BB8B31D1BC81FCD0056324B /* LaunchScreen.storyboard */,
 				4BB8B3201BC81FCD0056324B /* Info.plist */,
 				4BB8B3181BC81FCD0056324B /* ema.xcdatamodeld */,
-				4BADFCB61CC8287C00B949D2 /* MainViewController.swift */,
+				4BADFCB61CC8287C00B949D2 /* ViewController.swift */,
 				4BADFCB81CC8298800B949D2 /* ResearchContainerSegue.swift */,
+				4B6E6D651E0DD66000190F0F /* Constants.swift */,
+				4B6E6D671E0DDA7B00190F0F /* Extensions.swift */,
 			);
 			path = ema;
 			sourceTree = "<group>";
@@ -350,14 +371,15 @@
 			path = emaUITests;
 			sourceTree = "<group>";
 		};
-		F1BC1C42855E5E89060A1815 /* Frameworks */ = {
+		EF381D33D36BCBD380EA9A7E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				19A6A1AE4FE2EF8695B4ADAA /* libPods-emaUITests.a */,
-				12825806D205C7C7DC9B7F21 /* Pods_ema.framework */,
-				9948FF11EE126EDD23BC8134 /* Pods_emaTests.framework */,
+				9F1CB626265337935E9D449A /* Pods-ema.debug.xcconfig */,
+				4FAD9869122A50098C6A638A /* Pods-ema.release.xcconfig */,
+				5291CAD881994397BB76D6D6 /* Pods-emaTests.debug.xcconfig */,
+				729A669ADC560FCEC224B71A /* Pods-emaTests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +391,7 @@
 			buildPhases = (
 				4B88C7961C7B9F2D003F3397 /* Resources */,
 				4B88C7BA1C7B9F2E003F3397 /* Embed App Extensions */,
+				AADB147B41AA7CD2E2F86529 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -401,14 +424,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BB8B3391BC81FCD0056324B /* Build configuration list for PBXNativeTarget "ema" */;
 			buildPhases = (
-				EC0B61F6FBD9E97A19E58DF6 /* Check Pods Manifest.lock */,
+				DE1D205771A93A0145015D9E /* [CP] Check Pods Manifest.lock */,
 				4BB8B30A1BC81FCD0056324B /* Sources */,
 				4BB8B30B1BC81FCD0056324B /* Frameworks */,
 				4BB8B30C1BC81FCD0056324B /* Resources */,
-				887751B75A811509A7ED53C7 /* Copy Pods Resources */,
-				133B4D029765C304EB137126 /* Embed Pods Frameworks */,
 				4B88C7BE1C7B9F2E003F3397 /* Embed Watch Content */,
 				4BB156E21C7E5183002A1EAA /* Embed Frameworks */,
+				4733EB4DBF7BDF80A5C4E64C /* [CP] Embed Pods Frameworks */,
+				AE0395AF9D9F2725219FE1C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -424,12 +447,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BB8B33C1BC81FCD0056324B /* Build configuration list for PBXNativeTarget "emaTests" */;
 			buildPhases = (
-				10FDB0D1973AB0FD16EF4179 /* Check Pods Manifest.lock */,
+				7EFF90FA8F4331FB1CE25CBC /* [CP] Check Pods Manifest.lock */,
 				4BB8B3211BC81FCD0056324B /* Sources */,
 				4BB8B3221BC81FCD0056324B /* Frameworks */,
 				4BB8B3231BC81FCD0056324B /* Resources */,
-				0B986FBE1EC7719DEED75768 /* Copy Pods Resources */,
-				E3DF3669258A146FA16CE325 /* Embed Pods Frameworks */,
+				01B9C70830BEA9DAEF09631A /* [CP] Embed Pods Frameworks */,
+				65E5F4A909E16611F3E859DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -445,11 +468,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BB8B33F1BC81FCD0056324B /* Build configuration list for PBXNativeTarget "emaUITests" */;
 			buildPhases = (
-				E3AECA662CF27BE3F08C09A4 /* Check Pods Manifest.lock */,
 				4BB8B32C1BC81FCD0056324B /* Sources */,
 				4BB8B32D1BC81FCD0056324B /* Frameworks */,
 				4BB8B32E1BC81FCD0056324B /* Resources */,
-				CE795E5BE9B8C4B19E57F3D1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -468,19 +489,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = RTI;
 				TargetAttributes = {
 					4B88C7971C7B9F2D003F3397 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 35J8YXY799;
+						LastSwiftMigration = 0820;
 					};
 					4B88C7A31C7B9F2E003F3397 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 35J8YXY799;
+						LastSwiftMigration = 0820;
 					};
 					4BB8B30D1BC81FCD0056324B = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 35J8YXY799;
+						LastSwiftMigration = 0820;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 0;
@@ -489,10 +514,13 @@
 					};
 					4BB8B3241BC81FCD0056324B = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 35J8YXY799;
+						LastSwiftMigration = 0820;
 						TestTargetID = 4BB8B30D1BC81FCD0056324B;
 					};
 					4BB8B32F1BC81FCD0056324B = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 4BB8B30D1BC81FCD0056324B;
 					};
 				};
@@ -564,104 +592,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B986FBE1EC7719DEED75768 /* Copy Pods Resources */ = {
+		01B9C70830BEA9DAEF09631A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emaTests/Pods-emaTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		10FDB0D1973AB0FD16EF4179 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		133B4D029765C304EB137126 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ema/Pods-ema-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		887751B75A811509A7ED53C7 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ema/Pods-ema-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE795E5BE9B8C4B19E57F3D1 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emaUITests/Pods-emaUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E3AECA662CF27BE3F08C09A4 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E3DF3669258A146FA16CE325 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -669,19 +607,79 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emaTests/Pods-emaTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EC0B61F6FBD9E97A19E58DF6 /* Check Pods Manifest.lock */ = {
+		4733EB4DBF7BDF80A5C4E64C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ema/Pods-ema-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65E5F4A909E16611F3E859DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emaTests/Pods-emaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EFF90FA8F4331FB1CE25CBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE0395AF9D9F2725219FE1C8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ema/Pods-ema-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE1D205771A93A0145015D9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -702,12 +700,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B0827B11CD4031C00A28F1C /* PamHeaderView.swift in Sources */,
-				4BADFCB71CC8287C00B949D2 /* MainViewController.swift in Sources */,
+				4B6E6D6D1E0DDC5F00190F0F /* SurveyViewController.swift in Sources */,
+				4BADFCB71CC8287C00B949D2 /* ViewController.swift in Sources */,
+				4B6E6D6F1E0DDCBC00190F0F /* WeekdayIntroViewContoller.swift in Sources */,
 				4BADFCAC1CC8247800B949D2 /* StudyTasks.swift in Sources */,
 				4BADFCB91CC8298800B949D2 /* ResearchContainerSegue.swift in Sources */,
 				4BADFCB51CC8281B00B949D2 /* LoginViewController.swift in Sources */,
 				4BADFCA61CC8239800B949D2 /* WithdrawViewController.swift in Sources */,
 				4B0827B31CD4040C00A28F1C /* PamCollectionViewCell.swift in Sources */,
+				4B6E6D681E0DDA7B00190F0F /* Extensions.swift in Sources */,
 				4BADFCAA1CC8243100B949D2 /* ActivityViewController.swift in Sources */,
 				4BB8B3121BC81FCD0056324B /* AppDelegate.swift in Sources */,
 				4BB8B31A1BC81FCD0056324B /* ema.xcdatamodeld in Sources */,
@@ -718,6 +719,8 @@
 				4BADFCB31CC827C900B949D2 /* OnboardingViewController.swift in Sources */,
 				4BADFCAF1CC825CC00B949D2 /* ConsentDocument.swift in Sources */,
 				4B0827AF1CD4016500A28F1C /* PamViewController.swift in Sources */,
+				4B6E6D6A1E0DDB1A00190F0F /* WeekendIntroViewController.swift in Sources */,
+				4B6E6D661E0DD66000190F0F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,12 +796,14 @@
 		4B88C7B81C7B9F2E003F3397 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 35J8YXY799;
 				INFOPLIST_FILE = "watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rti.pam.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
@@ -807,12 +812,14 @@
 		4B88C7B91C7B9F2E003F3397 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 35J8YXY799;
 				INFOPLIST_FILE = "watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rti.pam.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
@@ -821,15 +828,16 @@
 		4B88C7BC1C7B9F2E003F3397 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = org.rti.pam.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
@@ -838,15 +846,16 @@
 		4B88C7BD1C7B9F2E003F3397 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = org.rti.pam.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.1;
 			};
@@ -865,8 +874,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -909,8 +920,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -929,14 +942,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		4BB8B33A1BC81FCD0056324B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A8F002664F389DF76A9F10A /* Pods-ema.debug.xcconfig */;
+			baseConfigurationReference = 9F1CB626265337935E9D449A /* Pods-ema.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -947,13 +962,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.rti.pam;
 				PRODUCT_NAME = Pam;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		4BB8B33B1BC81FCD0056324B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E874C28F6FB3B3126F43728C /* Pods-ema.release.xcconfig */;
+			baseConfigurationReference = 4FAD9869122A50098C6A638A /* Pods-ema.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -964,32 +981,37 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.rti.pam;
 				PRODUCT_NAME = Pam;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		4BB8B33D1BC81FCD0056324B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DD4414F9975408D1E305F2E /* Pods-emaTests.debug.xcconfig */;
+			baseConfigurationReference = 5291CAD881994397BB76D6D6 /* Pods-emaTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 35J8YXY799;
 				INFOPLIST_FILE = emaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rti.emaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ema.app/ema";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		4BB8B33E1BC81FCD0056324B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F59CA4C2F7F798005DF8E5C /* Pods-emaTests.release.xcconfig */;
+			baseConfigurationReference = 729A669ADC560FCEC224B71A /* Pods-emaTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 35J8YXY799;
 				INFOPLIST_FILE = emaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rti.emaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ema.app/ema";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1000,6 +1022,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rti.emaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ema;
 				USES_XCTRUNNER = YES;
 			};
@@ -1012,6 +1035,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rti.emaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ema;
 				USES_XCTRUNNER = YES;
 			};
