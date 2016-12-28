@@ -10,6 +10,10 @@ import UIKit
 
 class PamCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var caption: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var checkIcon: UIImageView!
+    @IBOutlet weak var backgroundCircle: UIView!
+    
+    var pamPhotoName:String = ""
+    
 }
