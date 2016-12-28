@@ -110,6 +110,9 @@ class ActivityViewController: UITableViewController, CLLocationManagerDelegate {
             /*
              self.navigationController?.pushViewController(secondViewController, animated: true)
              */
+            secondViewController.lat = String(txtLatitude)
+            secondViewController.long = String(txtLongitude)
+            secondViewController.researchNet = self.researchNet
             
             let navigationController = UINavigationController(rootViewController: secondViewController)
             

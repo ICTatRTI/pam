@@ -384,17 +384,6 @@
                                     <action selector="reloadImages" destination="xht-vB-yHc" eventType="touchUpInside" id="3RS-wE-2oP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbC-L6-wjW">
-                                <rect key="frame" x="135" y="570" width="105" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="Sdk-SA-Pms"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="finishSurveyButtonTapped" destination="xht-vB-yHc" eventType="touchUpInside" id="srg-nW-jye"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FrD-gt-FfV">
                                 <rect key="frame" x="10" y="72" width="355" height="535"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -472,6 +461,14 @@
                                     </connections>
                                 </collectionReusableView>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owf-0o-K8K">
+                                <rect key="frame" x="141" y="557" width="91" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="finishSurveyButtonTapped" destination="xht-vB-yHc" eventType="touchUpInside" id="IeN-SE-fdY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -480,22 +477,19 @@
                             <constraint firstItem="FrD-gt-FfV" firstAttribute="leading" secondItem="8k4-3O-jIP" secondAttribute="leadingMargin" constant="-6" id="Nc8-rH-mZq"/>
                             <constraint firstItem="vLv-xT-qeY" firstAttribute="leading" secondItem="8k4-3O-jIP" secondAttribute="leadingMargin" constant="96" id="UeV-H4-KRz"/>
                             <constraint firstItem="FrD-gt-FfV" firstAttribute="top" secondItem="anr-oY-XlJ" secondAttribute="bottom" constant="8" id="a0R-Gq-YVv"/>
-                            <constraint firstItem="qbC-L6-wjW" firstAttribute="centerX" secondItem="8k4-3O-jIP" secondAttribute="centerX" id="aE3-kQ-T56"/>
-                            <constraint firstItem="qbC-L6-wjW" firstAttribute="leading" secondItem="vLv-xT-qeY" secondAttribute="leading" constant="23" id="bHi-G5-Bua"/>
                             <constraint firstItem="vLv-xT-qeY" firstAttribute="top" secondItem="FrD-gt-FfV" secondAttribute="bottom" constant="-5" id="kNo-dV-S38"/>
-                            <constraint firstItem="vLv-xT-qeY" firstAttribute="top" secondItem="qbC-L6-wjW" secondAttribute="bottom" constant="3" id="oJ6-gH-KWJ"/>
                             <constraint firstItem="vLv-xT-qeY" firstAttribute="centerX" secondItem="8k4-3O-jIP" secondAttribute="centerX" id="ryt-RF-9Ez"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oma-0O-E9C"/>
                     <connections>
                         <outlet property="collectionView" destination="FrD-gt-FfV" id="ocW-uX-gYB"/>
-                        <outlet property="finishNavigationButton" destination="qbC-L6-wjW" id="HVL-en-WuF"/>
+                        <outlet property="finishNavigationButton" destination="owf-0o-K8K" id="VMf-p7-FOt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dM8-QB-3OJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="4655"/>
+            <point key="canvasLocation" x="1541.5" y="4654.5"/>
         </scene>
     </scenes>
     <resources>

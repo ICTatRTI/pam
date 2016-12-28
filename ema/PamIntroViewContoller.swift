@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import ResearchNet
 
-class PamIntroViewContoller: UIViewController {
+class PamIntroViewContoller: SurveyViewController {
 
+     var researchNet : ResearchNet!
     
 }

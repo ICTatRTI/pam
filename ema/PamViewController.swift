@@ -92,6 +92,7 @@ class PamViewController: SurveyViewController {
         finishNavigationButton.contentEdgeInsets = UIEdgeInsetsMake(10,20,10,20)
         finishNavigationButton.layer.borderColor = Constants.disabledColor.cgColor
         finishNavigationButton.isEnabled = false
+
         
     }
     

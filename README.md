@@ -4,12 +4,18 @@ This is an IOS app using the ResearchKit framework for the Ecological Momentary 
 
 This application uses the ResearchNet IOS framework, which can be found [here](https://bitbucket.org/rcdrti/researchnetsdk-ios). 
 
-### Push Notifications
-Everybody knows that using notifications are a great way to promote user engagement and I mean EVERYBODY. It is for this reason that we have included a sample push notification script handcrafted in PHP.  Here is how to use it:
+### How do I get set up? ###
 
-1. Install PHP
-2. Run this in a terminal window
-`php notifications/examplepush.php 'Breaking News' 'http://www.adampreston.org'`
+You need 
+
+* XCODE 9
+* [CocoaPods](https://cocoapods.org/)
+
+
+```
+run pod install
+open ema.xcworkspace in XCode 
+```
 
 Bugs, new requests or contribution
 --------------
