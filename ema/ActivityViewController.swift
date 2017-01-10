@@ -39,6 +39,8 @@ enum Activity: Int {
     }
 }
 
+
+
 class ActivityViewController: UITableViewController, CLLocationManagerDelegate {
     
     var researchNet : ResearchNet!
@@ -56,6 +58,7 @@ class ActivityViewController: UITableViewController, CLLocationManagerDelegate {
         locationFixAchieved = false
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        
         
         self.tableView.reloadData()
         
@@ -103,7 +106,6 @@ class ActivityViewController: UITableViewController, CLLocationManagerDelegate {
         switch activity {
         case .PAMSurvey:
             
-            
             // This is the way to refernece a custom task controller
             
             let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "pamStoryboardID") as! PamIntroViewContoller
@@ -112,6 +114,7 @@ class ActivityViewController: UITableViewController, CLLocationManagerDelegate {
              */
             secondViewController.lat = String(txtLatitude)
             secondViewController.long = String(txtLongitude)
+            secondViewController.device_id = UIDevice.current.identifierForVendor!.uuidString
             secondViewController.researchNet = self.researchNet
             
             let navigationController = UINavigationController(rootViewController: secondViewController)
@@ -123,76 +126,4 @@ class ActivityViewController: UITableViewController, CLLocationManagerDelegate {
     }
 }
 
-// Used for survey implementions with ResearchKit
-extension ActivityViewController : ORKTaskViewControllerDelegate {
-    
-    
-    
-    func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
-        
-        //write task name and complete date to local storage
-        let defaults = UserDefaults.standard
-        if taskViewController.task?.identifier == "SurveyWeekdayTask" {
-            defaults.set(Date(), forKey: "weekday_timestamp")
-        } else{
-            defaults.set(Date(), forKey: "weekend_timestamp")
-        }
-        
-        let device_id = UIDevice.current.identifierForVendor!.uuidString
-        let taskResult = taskViewController.result // this should be a ORKTaskResult
-        let results = taskResult.results as! [ORKStepResult]//[ORKStepResult]
-        var responses: [String:String] = [:]
-        
-        for thisStepResult in results { // [ORKStepResults]
-            
-            let stepResults = thisStepResult.results as! [ORKQuestionResult]
-            
-            /*
-             Go through the supported answer formats.  This is made easier with AppCore but we're not using this for now just because a) its in objective C and kind of hard to use and 2) its going away at some point to be replaced with enhancements to the ResearchKit framework
-             
-             */
-            if let scaleresult = stepResults.first as? ORKScaleQuestionResult
-            {
-                if scaleresult.scaleAnswer != nil
-                {
-                    responses[scaleresult.identifier] = (scaleresult.scaleAnswer?.stringValue)!
-                }
-            }
-            
-            if let choiceresult = stepResults.first as? ORKChoiceQuestionResult
-            {
-                if choiceresult.choiceAnswers != nil
-                {
-                    let selected = choiceresult.choiceAnswers!
-                    responses[choiceresult.identifier] = "\(selected.first!)"
-                }
-            }
-        }
-        
-        
-        // Submit results
-        researchNet.submitSurveyResponse({ (responseObject, error) in
-            
-            if error != nil {
-                
-                let errorMessage = "Unable to reach the server. Try again."
-                
-                let alert = UIAlertController(title: "Submission Error",
-                                              message: errorMessage, preferredStyle: .alert)
-                let action = UIAlertAction(title: "Ok", style: .default, handler: {
-                    (alert: UIAlertAction!) in taskViewController.goBackward()
-                })
-                alert.addAction(action)
-                taskViewController.present(alert, animated: true, completion: nil)
-                
-            } else {
-                taskViewController.dismiss(animated: true, completion: nil)
-            }
-            
-        }, device_id: device_id, lat: String(txtLatitude), long: String(txtLongitude), response: responses)
-        
-        
-        
-        
-    }
-}
+

@@ -42,6 +42,12 @@
 		4BB8B31F1BC81FCD0056324B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB8B31D1BC81FCD0056324B /* LaunchScreen.storyboard */; };
 		4BB8B32A1BC81FCD0056324B /* emaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3291BC81FCD0056324B /* emaTests.swift */; };
 		4BB8B3351BC81FCD0056324B /* emaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB8B3341BC81FCD0056324B /* emaUITests.swift */; };
+		4BBF37E31E255EAB005A1CE5 /* Consent_DataGathering.html in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF37DE1E255EAB005A1CE5 /* Consent_DataGathering.html */; };
+		4BBF37E41E255EAB005A1CE5 /* Consent_DataUse.html in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF37DF1E255EAB005A1CE5 /* Consent_DataUse.html */; };
+		4BBF37E51E255EAB005A1CE5 /* Consent_Privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF37E01E255EAB005A1CE5 /* Consent_Privacy.html */; };
+		4BBF37E61E255EAB005A1CE5 /* Consent_Welcome.html in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF37E11E255EAB005A1CE5 /* Consent_Welcome.html */; };
+		4BBF37E71E255EAB005A1CE5 /* Consent_Withdrawing.html in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF37E21E255EAB005A1CE5 /* Consent_Withdrawing.html */; };
+		4BBF37E91E255ED2005A1CE5 /* ConsentUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF37E81E255ED2005A1CE5 /* ConsentUtils.swift */; };
 		750ECA936C67394CD628A9C7 /* Pods_emaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486F17A8982D89CD597F65A0 /* Pods_emaTests.framework */; };
 		C091BD2A42EBA3FC4E9E4726 /* Pods_ema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3F57F15BA21E936A08D031 /* Pods_ema.framework */; };
 /* End PBXBuildFile section */
@@ -159,6 +165,12 @@
 		4BB8B3301BC81FCD0056324B /* emaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB8B3341BC81FCD0056324B /* emaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emaUITests.swift; sourceTree = "<group>"; };
 		4BB8B3361BC81FCD0056324B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BBF37DE1E255EAB005A1CE5 /* Consent_DataGathering.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Consent_DataGathering.html; sourceTree = "<group>"; };
+		4BBF37DF1E255EAB005A1CE5 /* Consent_DataUse.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Consent_DataUse.html; sourceTree = "<group>"; };
+		4BBF37E01E255EAB005A1CE5 /* Consent_Privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Consent_Privacy.html; sourceTree = "<group>"; };
+		4BBF37E11E255EAB005A1CE5 /* Consent_Welcome.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Consent_Welcome.html; sourceTree = "<group>"; };
+		4BBF37E21E255EAB005A1CE5 /* Consent_Withdrawing.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Consent_Withdrawing.html; sourceTree = "<group>"; };
+		4BBF37E81E255ED2005A1CE5 /* ConsentUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentUtils.swift; sourceTree = "<group>"; };
 		4FAD9869122A50098C6A638A /* Pods-ema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ema.release.xcconfig"; path = "Pods/Target Support Files/Pods-ema/Pods-ema.release.xcconfig"; sourceTree = "<group>"; };
 		5291CAD881994397BB76D6D6 /* Pods-emaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emaTests/Pods-emaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		729A669ADC560FCEC224B71A /* Pods-emaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-emaTests/Pods-emaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -290,7 +302,13 @@
 		4BADFCAD1CC824D500B949D2 /* Consent */ = {
 			isa = PBXGroup;
 			children = (
+				4BBF37DE1E255EAB005A1CE5 /* Consent_DataGathering.html */,
+				4BBF37DF1E255EAB005A1CE5 /* Consent_DataUse.html */,
+				4BBF37E01E255EAB005A1CE5 /* Consent_Privacy.html */,
+				4BBF37E11E255EAB005A1CE5 /* Consent_Welcome.html */,
+				4BBF37E21E255EAB005A1CE5 /* Consent_Withdrawing.html */,
 				4BADFCAE1CC825CC00B949D2 /* ConsentDocument.swift */,
+				4BBF37E81E255ED2005A1CE5 /* ConsentUtils.swift */,
 			);
 			name = Consent;
 			sourceTree = "<group>";
@@ -570,7 +588,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BB8B31F1BC81FCD0056324B /* LaunchScreen.storyboard in Resources */,
+				4BBF37E41E255EAB005A1CE5 /* Consent_DataUse.html in Resources */,
+				4BBF37E61E255EAB005A1CE5 /* Consent_Welcome.html in Resources */,
+				4BBF37E31E255EAB005A1CE5 /* Consent_DataGathering.html in Resources */,
+				4BBF37E71E255EAB005A1CE5 /* Consent_Withdrawing.html in Resources */,
 				4BB8B31C1BC81FCD0056324B /* Assets.xcassets in Resources */,
+				4BBF37E51E255EAB005A1CE5 /* Consent_Privacy.html in Resources */,
 				4BB8B3171BC81FCD0056324B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,6 +722,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BBF37E91E255ED2005A1CE5 /* ConsentUtils.swift in Sources */,
 				4B0827B11CD4031C00A28F1C /* PamHeaderView.swift in Sources */,
 				4B6E6D6D1E0DDC5F00190F0F /* SurveyViewController.swift in Sources */,
 				4BADFCB71CC8287C00B949D2 /* ViewController.swift in Sources */,

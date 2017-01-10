@@ -66,7 +66,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Get Started"/>
                                 <connections>
-                                    <segue destination="xht-vB-yHc" kind="push" id="mPo-qH-YKy"/>
+                                    <segue destination="xht-vB-yHc" kind="push" identifier="toPamQuestion" id="bWE-Lj-bDn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to RTI's Photographic Affect Meter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHn-la-o0u" customClass="ORKHeadlineLabel">
@@ -102,6 +102,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hiU-zn-ZcJ"/>
+                    <connections>
+                        <outlet property="gettingStartedButton" destination="xB7-lQ-k9d" id="cJp-de-XW5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="unl-pJ-ECj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

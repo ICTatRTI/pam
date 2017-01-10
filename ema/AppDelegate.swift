@@ -31,12 +31,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.cancelAllLocalNotifications();
         
         // Configure notifications for each day (sunday is 1)
+        scheduleLocalNotification(9,minute: 0, weekDay: 1)
+        scheduleLocalNotification(12,minute: 0, weekDay: 1)
         scheduleLocalNotification(17,minute: 0, weekDay: 1)
+
         scheduleLocalNotification(9,minute: 0, weekDay: 2)
+        scheduleLocalNotification(12,minute: 0, weekDay: 2)
+        scheduleLocalNotification(17,minute: 0, weekDay: 2)
+
         scheduleLocalNotification(9,minute: 0, weekDay: 3)
+        scheduleLocalNotification(12,minute: 0, weekDay: 3)
+        scheduleLocalNotification(17,minute: 0, weekDay: 3)
+        
         scheduleLocalNotification(9,minute: 0, weekDay: 4)
+        scheduleLocalNotification(12,minute: 0, weekDay: 4)
+        scheduleLocalNotification(17,minute: 0, weekDay: 4)
+        
         scheduleLocalNotification(9,minute: 0, weekDay: 5)
+        scheduleLocalNotification(12,minute: 0, weekDay: 5)
+        scheduleLocalNotification(17,minute: 0, weekDay: 5)
+        
         scheduleLocalNotification(9,minute: 0, weekDay: 6)
+        scheduleLocalNotification(12,minute: 0, weekDay: 6)
+        scheduleLocalNotification(17,minute: 0, weekDay: 6)
+        
+        scheduleLocalNotification(9,minute: 0, weekDay: 7)
+        scheduleLocalNotification(12,minute: 0, weekDay: 7)
         scheduleLocalNotification(17,minute: 0, weekDay: 7)
         
         // Default the dates that the surveys were completed. Default to sometime in the past, why not 1970
