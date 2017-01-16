@@ -17,19 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // register notification (this will allow the user to grant notifications for this app
-        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil))
-        
-        // Configure daily notifications
-        let notiftypes:UIUserNotificationType = [.alert, .badge, .sound]
-        
-        let notifSettings:UIUserNotificationSettings = UIUserNotificationSettings(types: notiftypes, categories: nil)
-        
-        UIApplication.shared.registerUserNotificationSettings(notifSettings)
         
         //Avoid duplicate notificaions
         application.cancelAllLocalNotifications();
         
+        // register notification (this will allow the user to grant notifications for this app
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil))
+
+
         // Configure notifications for each day (sunday is 1)
         scheduleLocalNotification(9,minute: 0, weekDay: 1)
         scheduleLocalNotification(12,minute: 0, weekDay: 1)

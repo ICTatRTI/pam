@@ -146,7 +146,7 @@ extension PamViewController: UICollectionViewDataSource {
         cell.checkIcon.image = UIImage(named:"check" )
         cell.backgroundCircle.isHidden = true;
         cell.backgroundCircle.layer.cornerRadius = 12.0;
-        cell.backgroundCircle.layer.borderWidth = 0.25;
+        
         
         return cell
     }

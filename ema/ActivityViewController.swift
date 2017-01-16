@@ -25,8 +25,7 @@ enum Activity: Int {
         switch self {
         case .PAMSurvey:
             return "PAM Survey"
-            
-            
+
         }
     }
     
