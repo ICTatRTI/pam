@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="r2x-bO-KcB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="r2x-bO-KcB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="7Mc-Py-inA">
@@ -38,7 +44,7 @@
                     <tabBarItem key="tabBarItem" title="Activities" image="tab_activities" id="UZU-Mw-6W6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WEx-ZO-fae">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -123,7 +129,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q0d-Sc-Iu0" id="tWe-1Y-Zxe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -146,7 +152,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="tab_profile" id="Jdd-ul-wAg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XqO-AY-UTA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -216,7 +222,7 @@
                                 <rect key="frame" x="0.0" y="270" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="koY-ty-JSX" id="eTg-bg-Oet">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -246,10 +252,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvN-MO-KSB">
-                                <rect key="frame" x="94" y="490" width="187" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="187" id="ytB-qw-PrT"/>
-                                </constraints>
+                                <rect key="frame" x="126" y="490" width="123" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Join Study"/>
                                 <connections>
@@ -263,29 +266,29 @@
                                     <action selector="loginButtonTapped:" destination="fw8-SK-Neh" eventType="touchUpInside" id="cT3-aB-MxE"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pam" translatesAutoresizingMaskIntoConstraints="NO" id="nZY-mR-Z7R">
-                                <rect key="frame" x="89" y="85" width="172" height="168"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Human Impacts of Lighting Study" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eng-3k-q0h">
+                                <rect key="frame" x="29" y="372" width="317" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="BLY-VK-ZDq"/>
-                                    <constraint firstAttribute="height" constant="168" id="Dgh-69-gKY"/>
+                                    <constraint firstAttribute="height" constant="110" id="8lu-Iy-bSW"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Our Study" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eng-3k-q0h">
-                                <rect key="frame" x="38" y="349" width="299" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="pam" translatesAutoresizingMaskIntoConstraints="NO" id="ljZ-oo-Od9">
+                                <rect key="frame" x="62" y="77" width="250" height="251"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nZY-mR-Z7R" firstAttribute="top" secondItem="6fx-aY-YJ5" secondAttribute="bottom" constant="65" id="1o6-Cm-PFY"/>
-                            <constraint firstItem="Eng-3k-q0h" firstAttribute="centerX" secondItem="pvN-MO-KSB" secondAttribute="centerX" id="Heh-B0-hZB"/>
-                            <constraint firstItem="pvN-MO-KSB" firstAttribute="top" secondItem="Eng-3k-q0h" secondAttribute="bottom" constant="105" id="O3a-Rw-LfH"/>
+                            <constraint firstItem="ljZ-oo-Od9" firstAttribute="centerX" secondItem="f9p-RV-hjf" secondAttribute="centerX" id="24u-OZ-KlJ"/>
+                            <constraint firstItem="Eng-3k-q0h" firstAttribute="top" secondItem="ljZ-oo-Od9" secondAttribute="bottom" constant="44" id="Hjo-WP-tlK"/>
+                            <constraint firstItem="Eng-3k-q0h" firstAttribute="leading" secondItem="f9p-RV-hjf" secondAttribute="leadingMargin" constant="13" id="KS9-CA-Tfa"/>
                             <constraint firstAttribute="bottom" secondItem="pvN-MO-KSB" secondAttribute="bottom" constant="132" id="PGQ-4K-G30"/>
+                            <constraint firstItem="pvN-MO-KSB" firstAttribute="top" secondItem="Eng-3k-q0h" secondAttribute="bottom" constant="8" symbolic="YES" id="SYG-2u-deG"/>
                             <constraint firstItem="pvN-MO-KSB" firstAttribute="centerX" secondItem="f9p-RV-hjf" secondAttribute="centerX" id="XbP-LY-x7A"/>
                             <constraint firstItem="94o-f1-UQZ" firstAttribute="centerX" secondItem="pvN-MO-KSB" secondAttribute="centerX" id="gbx-yp-fMo"/>
-                            <constraint firstItem="pvN-MO-KSB" firstAttribute="centerX" secondItem="nZY-mR-Z7R" secondAttribute="centerX" constant="12.5" id="ozS-X7-owF"/>
+                            <constraint firstItem="Eng-3k-q0h" firstAttribute="centerX" secondItem="pvN-MO-KSB" secondAttribute="centerX" id="xCs-j2-8QI"/>
                             <constraint firstItem="94o-f1-UQZ" firstAttribute="top" secondItem="pvN-MO-KSB" secondAttribute="bottom" constant="29" id="y64-uP-qNE"/>
                         </constraints>
                     </view>
@@ -297,7 +300,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Aj-eh-l42" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NgN-Mi-Na6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1209.5999999999999" y="1035.6533333333334"/>
+            <point key="canvasLocation" x="1209.5" y="1035.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CAH-f0-KhX">
@@ -352,7 +355,7 @@
                 <navigationController storyboardIdentifier="pamNavigationControllerId" automaticallyAdjustsScrollViewInsets="NO" id="BsA-Lz-g7Y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MaH-je-Kmk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -503,9 +506,4 @@
         <image name="tab_activities" width="23" height="23"/>
         <image name="tab_profile" width="24" height="24"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>
