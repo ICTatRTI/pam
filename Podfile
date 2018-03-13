@@ -5,12 +5,12 @@
 
 target 'ema' do
 	pod 'ResearchKit', '1.3.1'
-	pod 'ResearchNet', :git => 'https://github.com/ICTatRTI/ResearchnetSDK-IOS.git', :tag => '0.1.3'
+	pod 'ResearchNet', :git => 'https://github.com/ICTatRTI/ResearchnetSDK-IOS.git', :tag => '0.1.4'
 end
 
 target 'emaTests' do
 	pod 'ResearchKit', '1.3.1'
-	pod 'ResearchNet', :git => 'https://github.com/ICTatRTI/ResearchnetSDK-IOS.git', :tag => '0.1.3'
+	pod 'ResearchNet', :git => 'https://github.com/ICTatRTI/ResearchnetSDK-IOS.git', :tag => '0.1.4'
 
 end
 
