@@ -5,9 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Human Imacts of Lighting Study</string>
+	<string>Lighting Study</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
 	<key>CFBundleIcons</key>
 	<dict/>
 	<key>CFBundleIcons~ipad</key>
@@ -38,7 +40,11 @@
 	<string>This application may ask permission to share your health data</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>This application may ask permission to update your data</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We use Apple's location services to provide your geographic location information when you are participating in our study. This data is immensely valuable to our researchers.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We use Apple's location services to provide your geographic location information when you are participating in our study. This data is immensely valuable to our researchers.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We use Apple's location services to provide your geographic location information when you are participating in our study. This data is immensely valuable to our researchers.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This application requires access to the microphone for uploading audio</string>
