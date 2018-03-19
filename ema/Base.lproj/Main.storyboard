@@ -193,6 +193,14 @@
                                         <segue destination="iBl-JC-z5h" kind="unwind" unwindAction="unwindToWithdrawl:" id="tIQ-op-1VS"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBp-Uk-Mkx">
+                                    <rect key="frame" x="121" y="194" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Log Out"/>
+                                    <connections>
+                                        <segue destination="iBl-JC-z5h" kind="unwind" unwindAction="unwindToLogout:" id="0Gq-fl-hfb"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -225,7 +233,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7QL-i2-sBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iBl-JC-z5h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1103.4666666666667" y="3607.7466666666664"/>
+            <point key="canvasLocation" x="1102.5" y="3607.5"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="KjJ-Qg-kzw">

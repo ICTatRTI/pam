@@ -55,6 +55,10 @@ class ViewController: UIViewController {
         toWithdrawl()
     }
     
+    @IBAction func unwindToLogout(_ segue: UIStoryboardSegue) {
+        toLogout()
+    }
+    
     @IBAction func unwindToOnboarding(_ segue: UIStoryboardSegue) {
         toOnboarding()
     }
@@ -75,6 +79,17 @@ class ViewController: UIViewController {
         viewController.delegate = self
         
         present(viewController, animated: true, completion: nil)
+    }
+    
+    func toLogout() {
+        ORKPasscodeViewController.removePasscodeFromKeychain()
+        
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "authKey")
+        
+        // Call backend to disable user
+        
+        toOnboarding()
     }
     
 }
