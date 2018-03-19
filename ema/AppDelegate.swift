@@ -121,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let localNotificaion = UILocalNotification()
         localNotificaion.fireDate = adjustedDate
-        localNotificaion.alertBody = "Please complete your WorkDay study activities today.  Thanks again for participating."
+        localNotificaion.alertBody = "Please complete your lighting study activities today.  Thanks again for participating."
         localNotificaion.timeZone = TimeZone.current
         
         localNotificaion.repeatInterval = .weekOfYear
