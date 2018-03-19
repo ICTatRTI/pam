@@ -24,7 +24,7 @@ enum Activity: Int {
     var title: String {
         switch self {
         case .PAMSurvey:
-            return "PAM Survey"
+            return "Impacts of Lighting Survey"
 
         }
     }
