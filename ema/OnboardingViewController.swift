@@ -40,17 +40,7 @@ class OnboardingViewController: UIViewController {
     }
     
     @IBAction func joinButtonTapped(_ sender: UIButton) {
-        let consentDocument = ConsentDocument()
-        let consentStep = ORKVisualConsentStep(identifier: VISUAL_CONSSENT_STEP_IDENTIFIER, document: consentDocument)
-        
-        
-        let signature = consentDocument.signatures!.first!
-        
-        let reviewConsentStep = ORKConsentReviewStep(identifier: CONSENT_REVIEW_IDENTIFIER, signature: signature, in: consentDocument)
-        
-        reviewConsentStep.text = "Review the consent form."
-        reviewConsentStep.reasonForConsent = "Consent to join our research Study."
-        
+   
         let registrationTitle = NSLocalizedString("Registration", comment: "")
         let passcodeValidationRegex = "^(?=.*\\d).{4,8}$"
         let passcodeInvalidMessage = NSLocalizedString("A valid password must be 4 and 8 digits long and include at least one numeric character.", comment: "")
@@ -69,7 +59,7 @@ class OnboardingViewController: UIViewController {
         completionStep.title = "Welcome aboard."
         completionStep.text = "Thank you for joining this study."
         
-        let orderedTask = ORKOrderedTask(identifier: "Join", steps: [ consentStep,reviewConsentStep, registrationStep, waitStep,completionStep])
+        let orderedTask = ORKOrderedTask(identifier: "Join", steps: [ registrationStep, waitStep,completionStep])
         
         let taskViewController = ORKTaskViewController(task: orderedTask, taskRun: nil)
         taskViewController.delegate = self
