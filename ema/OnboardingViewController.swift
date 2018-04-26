@@ -41,11 +41,13 @@ class OnboardingViewController: UIViewController {
     
     @IBAction func joinButtonTapped(_ sender: UIButton) {
    
+        
+      
         let registrationTitle = NSLocalizedString("Registration", comment: "")
         let passcodeValidationRegex = "^(?=.*\\d).{4,8}$"
         let passcodeInvalidMessage = NSLocalizedString("A valid password must be 4 and 8 digits long and include at least one numeric character.", comment: "")
         
-        let registrationOptions: ORKRegistrationStepOption = [ .includeGender, .includeDOB]
+        let registrationOptions: ORKRegistrationStepOption = [ .includeGivenName, .includeFamilyName, .includeGender, .includeDOB]
         let registrationStep = ORKRegistrationStep(identifier: String(REGISTRATION_STEP), title: registrationTitle, text: "The following fields are required", passcodeValidationRegex: passcodeValidationRegex, passcodeInvalidMessage: passcodeInvalidMessage, options: registrationOptions)
         
         let waitTitle = NSLocalizedString("Creating account", comment: "")
@@ -93,28 +95,19 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
             
             
             let taskViewControllerResult = taskViewController.result
-            // let results = taskViewControllerResult.results as! [ORKStepResult]
-            
-            
-            // Consent
-            let consent_step = taskViewControllerResult.stepResult(forStepIdentifier: CONSENT_REVIEW_IDENTIFIER)
-            let consent_stepResults = consent_step!.results as! [ORKConsentSignatureResult]
-            let consent_signature = consent_stepResults.first!
-            let first_name = consent_signature.signature?.givenName
-            let last_name = consent_signature.signature?.familyName
-            //var consented = consent_signature.consented
-            
-            
+  
             // Registration
             let registration_step = taskViewControllerResult.stepResult(forStepIdentifier: REGISTRATION_STEP)
             
             let stepResults = registration_step!.results as! [ORKQuestionResult]
             let username = (stepResults[0] as? ORKTextQuestionResult)?.textAnswer
             let password = (stepResults[2] as? ORKTextQuestionResult)?.textAnswer
-            let genderAnswer = (stepResults[3] as? ORKChoiceQuestionResult)?.choiceAnswers
+            let first_name = (stepResults[3] as? ORKTextQuestionResult)?.textAnswer
+            let last_name = (stepResults[4] as? ORKTextQuestionResult)?.textAnswer
+            let genderAnswer = (stepResults[5] as? ORKChoiceQuestionResult)?.choiceAnswers
             let gender = genderAnswer![0] as? String
             
-            let dobAnswer = (stepResults[4] as? ORKDateQuestionResult)?.dateAnswer
+            let dobAnswer = (stepResults[6] as? ORKDateQuestionResult)?.dateAnswer
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             let dob = dateFormatter.string( from: dobAnswer!)
