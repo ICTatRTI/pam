@@ -455,9 +455,12 @@
                                     </connections>
                                 </collectionReusableView>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-0m-bBY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-0m-bBY">
                                 <rect key="frame" x="117" y="502" width="140" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="BLf-cI-eyZ"/>
+                                    <constraint firstAttribute="width" constant="140" id="iLP-Hw-311"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
@@ -467,8 +470,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vLv-xT-qeY" firstAttribute="top" secondItem="h7x-0m-bBY" secondAttribute="bottom" constant="30" id="0bq-lM-fOp"/>
                             <constraint firstItem="EXE-pq-lkC" firstAttribute="top" secondItem="vLv-xT-qeY" secondAttribute="bottom" constant="47" id="3mg-tY-Ecq"/>
                             <constraint firstItem="vLv-xT-qeY" firstAttribute="centerX" secondItem="FrD-gt-FfV" secondAttribute="centerX" id="CCW-vB-qR5"/>
+                            <constraint firstItem="h7x-0m-bBY" firstAttribute="centerX" secondItem="vLv-xT-qeY" secondAttribute="centerX" id="Cje-a4-7n0"/>
                             <constraint firstItem="FrD-gt-FfV" firstAttribute="leading" secondItem="8k4-3O-jIP" secondAttribute="leadingMargin" id="Nc8-rH-mZq"/>
                             <constraint firstItem="vLv-xT-qeY" firstAttribute="leading" secondItem="8k4-3O-jIP" secondAttribute="leadingMargin" constant="96" id="UeV-H4-KRz"/>
                             <constraint firstItem="FrD-gt-FfV" firstAttribute="top" secondItem="anr-oY-XlJ" secondAttribute="bottom" id="a0R-Gq-YVv"/>
